@@ -5,7 +5,7 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-ink mb-4">Get in Touch</h1>
           <p className="text-xl text-slate-600">
-            Ready to transform your location data? Let's discuss how SaltGIS can help your organization.
+            Ready to transform your location data? Let&apos;s discuss how SaltGIS can help your organization.
           </p>
         </div>
 

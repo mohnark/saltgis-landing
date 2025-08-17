@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://saltgis.eu
+
+# Sitemaps
+Sitemap: https://saltgis.eu/sitemap.xml

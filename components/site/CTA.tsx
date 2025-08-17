@@ -9,7 +9,7 @@ export default function CTA() {
         </h2>
         <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
           Join hundreds of organizations that trust SaltGIS to power their geospatial operations.
-          Let's discuss how we can help you make better location-based decisions.
+          Let&apos;s discuss how we can help you make better location-based decisions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link

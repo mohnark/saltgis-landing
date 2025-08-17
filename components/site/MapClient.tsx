@@ -12,7 +12,6 @@ export default function MapClient() {
     const initMap = async () => {
       try {
         const maplibregl = (await import('maplibre-gl')).default
-        await import('maplibre-gl/dist/maplibre-gl.css')
 
         const map = new maplibregl.Map({
           container: ref.current!,
