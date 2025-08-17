@@ -1,6 +1,4 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
-import remarkGfm from 'remark-gfm'
-import rehypePrettyCode from 'rehype-pretty-code'
 
 export const Doc = defineDocumentType(() => ({
   name: 'Doc',
@@ -44,15 +42,4 @@ export const Doc = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: './content',
   documentTypes: [Doc],
-  mdx: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      [
-        rehypePrettyCode,
-        {
-          theme: 'github-dark',
-        },
-      ],
-    ],
-  },
 }) 
