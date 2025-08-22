@@ -7,9 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg">
-                S
-              </div>
+              <img src="/logo.png" alt="SaltGIS Logo" className="h-8 w-8" />
               <span className="text-xl font-bold">SaltGIS</span>
             </div>
             <p className="text-slate-300 mb-4">
@@ -34,7 +32,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
-              <li><Link href="/demo" className="text-slate-300 hover:text-white transition-colors">Live Demo</Link></li>
+              <li><Link href="/portfolio" className="text-slate-300 hover:text-white transition-colors">Portfolio</Link></li>
               <li><Link href="/features" className="text-slate-300 hover:text-white transition-colors">Features</Link></li>
               <li><Link href="/pricing" className="text-slate-300 hover:text-white transition-colors">Pricing</Link></li>
               <li><Link href="/api" className="text-slate-300 hover:text-white transition-colors">API</Link></li>
@@ -65,7 +63,7 @@ export default function Footer() {
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-400 text-sm">
-              © 2024 SaltGIS. All rights reserved.
+              © 2025 Saltsaptial OÜ. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-slate-400 hover:text-white text-sm transition-colors">

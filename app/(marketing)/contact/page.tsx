@@ -28,7 +28,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="font-medium">Email</div>
-                  <div className="text-slate-600">hello@saltgis.eu</div>
+                  <div className="text-slate-600">admin@saltgis.eu</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -37,7 +37,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <div className="font-medium">Phone</div>
-                  <div className="text-slate-600">+372 XXX XXX</div>
+                  <div className="text-slate-600">+372 560 18191</div>
                 </div>
               </div>
             </div>

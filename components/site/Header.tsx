@@ -12,9 +12,7 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-lg">
-              S
-            </div>
+            <img src="/logo.png" alt="SaltGIS Logo" className="h-8 w-8" />
             <span className="text-xl font-bold text-ink">SaltGIS</span>
           </Link>
 
@@ -23,8 +21,8 @@ export default function Header() {
             <Link href="/" className="text-slate-600 hover:text-primary transition-colors">
               Home
             </Link>
-            <Link href="/demo" className="text-slate-600 hover:text-primary transition-colors">
-              Demo
+            <Link href="/portfolio" className="text-slate-600 hover:text-primary transition-colors">
+              Portfolio
             </Link>
             <Link href="/blog" className="text-slate-600 hover:text-primary transition-colors">
               Blog
@@ -53,8 +51,8 @@ export default function Header() {
               <Link href="/" className="text-slate-600 hover:text-primary transition-colors">
                 Home
               </Link>
-              <Link href="/demo" className="text-slate-600 hover:text-primary transition-colors">
-                Demo
+              <Link href="/portfolio" className="text-slate-600 hover:text-primary transition-colors">
+                Portfolio
               </Link>
               <Link href="/blog" className="text-slate-600 hover:text-primary transition-colors">
                 Blog

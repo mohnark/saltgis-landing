@@ -5,23 +5,23 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'SaltGIS — Advanced GIS Software & Location Intelligence',
-  description: 'We build modern geospatial software that turns location data into decisions.',
-  keywords: ['GIS', 'geospatial', 'mapping', 'location intelligence', 'software'],
+  title: 'Software for Advanced Location Technologies in Geographic Information Systems',
+  description: 'Transforming complex spatial data into clear, actionable intelligence for smarter land, infrastructure, and resource management.',
+  keywords: ['GIS', 'geospatial', 'mapping', 'location intelligence', 'software', 'spatial analysis', 'infrastructure management'],
   authors: [{ name: 'SaltGIS' }],
   creator: 'SaltGIS',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://saltgis.eu',
-    title: 'SaltGIS — Advanced GIS Software & Location Intelligence',
-    description: 'We build modern geospatial software that turns location data into decisions.',
+    title: 'Software for Advanced Location Technologies in Geographic Information Systems',
+    description: 'Transforming complex spatial data into clear, actionable intelligence for smarter land, infrastructure, and resource management.',
     siteName: 'SaltGIS',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SaltGIS — Advanced GIS Software & Location Intelligence',
-    description: 'We build modern geospatial software that turns location data into decisions.',
+    title: 'Software for Advanced Location Technologies in Geographic Information Systems',
+    description: 'Transforming complex spatial data into clear, actionable intelligence for smarter land, infrastructure, and resource management.',
   },
   robots: {
     index: true,

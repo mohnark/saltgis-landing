@@ -1,10 +1,12 @@
 # SaltGIS
 
-Advanced GIS Software & Location Intelligence
+Software for Advanced Location Technologies in Geographic Information Systems
 
 ## Overview
 
-SaltGIS is a modern geospatial software platform that transforms location data into actionable insights. Built with Next.js, TypeScript, and Tailwind CSS, it provides a comprehensive solution for organizations needing powerful GIS capabilities.
+SaltGIS develops innovative software that transforms complex spatial data into clear, actionable intelligence. Our mission is to equip organizations with tools that make land, infrastructure, and resource management smarter, faster, and more precise.
+
+Built with Next.js, TypeScript, and Tailwind CSS, SaltGIS provides comprehensive solutions for organizations needing powerful GIS capabilities across agriculture, urban planning, environmental monitoring, and infrastructure development.
 
 ## Features
 
