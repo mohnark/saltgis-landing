@@ -23,13 +23,13 @@ const menuData: Menu[] = [
     id: 4,
     title: "Products",
     path: "/products",
-    newTab: false,
-  },
-  {
+        newTab: false,
+      },
+      {
     id: 5,
     title: "Blog",
-    path: "/blog",
-    newTab: false,
+        path: "/blog",
+        newTab: false,
   },
 ];
 export default menuData;

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Products from "@/components/Products";
+import Breadcrumb from "@/components/Common/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Products - SaltGIS | GeoFlow & Geospatial Software Solutions",
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
-      <div className="pt-16 md:pt-20 lg:pt-28">
+      <div className="pt-24 md:pt-28 lg:pt-32">
+        <Breadcrumb pageName="Products" />
         <div className="container">
           <div className="mb-16 flex flex-col items-center">
             <h1 className="mb-4 text-4xl font-bold !leading-tight text-black dark:text-white sm:text-5xl md:text-[60px]">

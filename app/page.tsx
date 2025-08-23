@@ -8,7 +8,7 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 
 import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+// import Video from "@/components/Video";
 
 
 export default function Home() {
@@ -17,12 +17,10 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
-      <Video />
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Blog />
+      {/* <Video /> */}
+      {/* <Brands /> */}
+      {/* <Testimonials /> */}
+      {/* <Blog /> */}
       <Contact />
     </>
   );
