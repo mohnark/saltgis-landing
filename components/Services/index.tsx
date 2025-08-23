@@ -65,10 +65,10 @@ export default function Services() {
               Talk to an engineer <ArrowRight className="ml-2 h-4 w-4" />
             </button>
             <button
-              onClick={() => openEmail("SaltGIS Service Packages", "Hello,\n\nI'm interested in learning more about SaltGIS service packages.\n\nBest regards,")}
-              className="inline-flex items-center justify-center rounded-md border px-5 py-3 text-sm font-medium"
+              onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
+              className="inline-flex items-center justify-center rounded-md border px-5 py-3 text-sm font-medium text-foreground hover:bg-muted/50 transition-colors"
             >
-              View service packages
+              View service packages <ArrowRight className="ml-2 h-4 w-4" />
             </button>
           </div>
         </div>
