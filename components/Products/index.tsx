@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Products = () => {
   const products = [
     {
@@ -60,7 +62,7 @@ const Products = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-25 xl:py-30 bg-gray-light dark:bg-dark">
+    <section className="bg-gray-light dark:bg-dark">
       <div className="container">
         <div className="mb-16 flex flex-col items-center">
           <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
@@ -138,18 +140,18 @@ const Products = () => {
                 Try the future of project management, today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <Link
                   href="/contact"
                   className="inline-block border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors"
                 >
                   Request Demo
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/contact"
                   className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
                 >
                   Get Started Free
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -162,12 +164,12 @@ const Products = () => {
           <p className="mb-8 text-base text-body-color dark:text-body-color-dark">
             We&apos;re constantly developing new solutions to meet evolving geospatial needs.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-colors"
           >
             Stay Updated
-          </a>
+          </Link>
         </div>
       </div>
     </section>

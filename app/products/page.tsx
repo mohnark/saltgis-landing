@@ -12,17 +12,6 @@ export default function ProductsPage() {
     <>
       <div className="pt-24 md:pt-28 lg:pt-32">
         <Breadcrumb pageName="Products" />
-        <div className="container">
-          <div className="mb-16 flex flex-col items-center">
-            <h1 className="mb-4 text-4xl font-bold !leading-tight text-black dark:text-white sm:text-5xl md:text-[60px]">
-              Our Products
-            </h1>
-            <p className="text-base !leading-relaxed text-body-color md:text-lg text-center max-w-3xl">
-              Innovative software solutions that transform complex spatial data into actionable intelligence. 
-              Built with precision, usability, and innovation to meet your geospatial needs.
-            </p>
-          </div>
-        </div>
       </div>
       <Products />
     </>
