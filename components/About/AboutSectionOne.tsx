@@ -36,7 +36,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="About SaltGIS"
-                paragraph="We build modern GIS software that turns complex location data into actionable intelligence. From precision mapping and remote sensing to automated ETL and decision dashboards, SaltGIS helps teams manage land, infrastructure, and resources with confidence."
+                paragraph="SaltGIS (Software for Advanced Location Technologies in Geographic Information Systems) develops innovative GIS software that transforms complex spatial data into clear, actionable intelligence. Founded in 2025, our mission is to equip organizations with smarter, faster, and more precise tools for land, infrastructure, and resource management. From precision mapping and spatial analysis to automation and decision dashboards, we build solutions that bridge geospatial data with real-world outcomes."
                 mb="44px"
               />
 
@@ -47,14 +47,14 @@ const AboutSectionOne = () => {
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text="Precision mapping & spatial analysis" />
-                    <List text="Remote sensing (Sentinel/UAV) & NDVI layers" />
-                    <List text="Parcel & asset management workflows" />
+                    <List text="Remote sensing (Sentinel/UAV) & NDVI insights" />
+                    <List text="Land parcel & asset management workflows" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Automated ETL, QA, and data pipelines" />
-                    <List text="OGC standards (WMS, WFS, WFS‑T) & interoperability" />
-                    <List text="Dashboards & decision support" />
+                    <List text="Automated ETL, QA, and spatial data pipelines" />
+                    <List text="OGC standards (WMS, WFS, WFS-T) & interoperability" />
+                    <List text="Dashboards & decision-support systems" />
                   </div>
                 </div>
               </div>
@@ -85,11 +85,6 @@ const AboutSectionOne = () => {
               </div>
             </div>
           </div>
-
-          {/* Subnote (optional, remove if not needed) */}
-          {/* <p className="mt-8 text-sm text-muted-foreground">
-            Tech stack: Next.js + Tailwind, MapLibre/Deck.gl, scalable APIs.
-          </p> */}
         </div>
       </div>
     </section>
