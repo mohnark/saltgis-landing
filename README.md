@@ -1,137 +1,46 @@
-# SaltGIS
+# Startup - Free Next.js Startup Website Template
 
-Software for Advanced Location Technologies in Geographic Information Systems
+Startup free, open-source, and premium-quality startup website template for Next.js comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
 
-## Overview
+If you're looking for a high-quality and visually appealing, feature-rich Next.js Template for your next startup, SaaS, or business website, this is the perfect choice and starting point for you!
 
-SaltGIS develops innovative software that transforms complex spatial data into clear, actionable intelligence. Our mission is to equip organizations with tools that make land, infrastructure, and resource management smarter, faster, and more precise.
+### ✨ Key Features
+- Crafted for Startup and SaaS Business
+- Next.js 13 and Tailwind CSS
+- All Essential Business Sections and Pages
+- High-quality and Clean Design
+- Dark and Light Version
+- TypeScript Support
+and Much More ...
 
-Built with Next.js, TypeScript, and Tailwind CSS, SaltGIS provides comprehensive solutions for organizations needing powerful GIS capabilities across agriculture, urban planning, environmental monitoring, and infrastructure development.
+### [🔥 Get Startup Pro](https://nextjstemplates.com/templates/saas-starter-startup)
 
-## Features
+[![Startup Pro](https://cdn.nextjstemplates.com/Startup-Pro---Next.js-Starter-Template-for-SaaS-Startups-282e26f7-f543-4ae4-a777-ac306c08cce8.png)](https://nextjstemplates.com/templates/saas-starter-startup)
 
-- 🗺️ **Interactive Mapping**: MapLibre-powered maps with real-time updates
-- 📱 **Responsive Design**: Mobile-first design that works on all devices
-- 🎨 **Modern UI**: Beautiful interface built with Tailwind CSS and shadcn/ui
-- 📝 **Content Management**: MDX-based content with Contentlayer
-- 🚀 **Performance**: Optimized for speed and SEO
-- 🔧 **Developer Friendly**: TypeScript, ESLint, and modern tooling
+Startup Pro - Expertly crafted for fully-functional, high-performing SaaS startup websites. Comes with with Authentication, Database, Blog, and all the essential integrations necessary for SaaS business sites.
 
-## Tech Stack
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Maps**: MapLibre GL
-- **Content**: MDX via Contentlayer
-- **Deployment**: Vercel-ready
+### [🚀 View Free Demo](https://startup.nextjstemplates.com/)
 
-## Getting Started
+### [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
 
-### Prerequisites
+### [📦 Download](https://nextjstemplates.com/templates/startup)
 
-- Node.js 18+ 
-- pnpm (recommended) or npm
+### [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
 
-### Installation
+### [🔌 Documentation](https://nextjstemplates.com/docs)
 
-1. Clone the repository:
-```bash
-git clone <your-repo-url>
-cd saltgis
-```
+### ⚡ Deploy Now
 
-2. Install dependencies:
-```bash
-pnpm install
-```
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
 
-3. Run the development server:
-```bash
-pnpm dev
-```
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/startup-nextjs)
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Building for Production
+### 📄 License
+Startup is 100% free and open-source, feel free to use with your personal and commercial projects.
 
-```bash
-pnpm build
-pnpm start
-```
+### 💜 Support
+If you like the template, please star this repository to inspire the team to create more stuff like this and reach more users like you!
 
-## Project Structure
-
-```
-saltgis/
-├── app/                    # Next.js App Router
-│   ├── (marketing)/       # Marketing pages
-│   ├── demo/              # Map demo page
-│   ├── blog/              # Blog posts
-│   └── api/               # API routes
-├── components/             # React components
-│   ├── ui/                # shadcn/ui components
-│   └── site/              # Site-specific components
-├── content/                # MDX content files
-├── lib/                    # Utility functions
-├── public/                 # Static assets
-├── styles/                 # Global styles
-└── contentlayer.config.ts  # Contentlayer configuration
-```
-
-## Customization
-
-### Colors
-
-The project uses a custom color palette defined in `tailwind.config.ts`:
-
-- **Primary**: `#118C4F` (Green)
-- **Ink**: `#0A1A2F` (Dark Blue)
-
-### Fonts
-
-- **Body**: Inter
-- **Headings**: Plus Jakarta Sans
-
-### Adding Content
-
-1. Create new MDX files in the `content/` directory
-2. Use the frontmatter format:
-```mdx
----
-title: "Your Title"
-description: "Your description"
-date: "2024-01-01"
-published: true
-tags: ["tag1", "tag2"]
----
-```
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Import the repository in Vercel
-3. Set the framework to Next.js
-4. Deploy
-
-### Environment Variables
-
-No environment variables are required for basic functionality.
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
-
-## Support
-
-For support, please contact us at [contact@saltgis.eu](mailto:contact@saltgis.eu) or visit our website at [https://saltgis.eu](https://saltgis.eu). 
+### ✨ Explore and Download - Free [Next.js Templates](https://nextjstemplates.com)
