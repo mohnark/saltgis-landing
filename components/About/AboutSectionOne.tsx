@@ -63,24 +63,24 @@ const AboutSectionOne = () => {
             {/* Visual */}
             <div className="w-full px-4 lg:w-1/2">
               <div
-                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[520px] lg:mr-0"
+                className="wow fadeInUp mx-auto text-center lg:mr-0"
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/images/about/about-image.svg"
+                  src="/images/about/about-image.png"
                   alt="SaltGIS—map interfaces, analytics, and remote-sensing layers"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 520px"
+                  width={520}
+                  height={500}
                   priority
-                  className="drop-shadow-three mx-auto max-w-full dark:hidden dark:drop-shadow-none lg:mr-0"
+                  className="mx-auto max-w-full h-auto drop-shadow-three dark:hidden"
                 />
                 <Image
-                  src="/images/about/about-image-dark.svg"
+                  src="/images/about/about-image-dark.png"
                   alt="SaltGIS—map interfaces, analytics, and remote-sensing layers (dark mode)"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 520px"
+                  width={520}
+                  height={500}
                   priority
-                  className="drop-shadow-three mx-auto hidden max-w-full dark:block dark:drop-shadow-none lg:mr-0"
+                  className="mx-auto max-w-full h-auto hidden drop-shadow-three dark:block"
                 />
               </div>
             </div>

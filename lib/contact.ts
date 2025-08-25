@@ -1,7 +1,7 @@
 // Contact configuration
 export const contactConfig = {
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+37256018191",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "kumail@saltgis.eu",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "sales@saltgis.eu",
   phone: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "+37256018191"
 };
 
