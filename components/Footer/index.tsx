@@ -221,12 +221,12 @@ const Footer = () => {
 
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
-              © 2025 SaltGIS. All rights reserved.
+            {/* <p className="text-center text-base text-body-color dark:text-white">
+              2025 SaltGIS. All rights reserved.
             </p>
             <p className="text-center text-sm text-body-color/70 dark:text-white/70">
               SaltGIS is a brand of SaltSpatial OÜ, registered in Estonia.
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="absolute right-0 top-14 z-[-1]">
