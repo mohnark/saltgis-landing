@@ -43,7 +43,7 @@ const featuresData: Feature[] = [
     ),
     title: "Modern Technology Stack",
     paragraph:
-      "Built with Next.js, Tailwind CSS, and scalable APIs, our apps are fast, secure, and designed to grow with your business needs.",
+      "Built with modern GIS technologies, cloud infrastructure, and scalable APIs, our applications deliver high-performance spatial analysis and mapping capabilities that grow with your business needs.",
   },
   {
     id: 4,
