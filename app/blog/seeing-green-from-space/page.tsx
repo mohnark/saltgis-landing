@@ -34,7 +34,6 @@ const BlogPost = () => {
       <section className="pb-[120px] pt-[120px]">
         <div className="container">
           <div className="mx-auto max-w-4xl">
-            {/* Header */}
             <div className="mb-12 text-center">
               <h1 className="mb-6 text-4xl font-bold !leading-tight text-black dark:text-white sm:text-5xl md:text-[60px]">
                 Seeing Green from Space: Vegetation Health with Satellite Indices
@@ -53,8 +52,17 @@ const BlogPost = () => {
               </div>
             </div>
 
-{/* Featured — Global Vegetation (VIIRS NDVI) */} <figure className="mb-12"> <img src="https://cdn.mos.cms.futurecdn.net/snpjZuM9rU3QQqoZR4vKmJ.jpg.webp" alt="Global vegetation composite (NDVI) from Suomi NPP VIIRS, April 2012–April 2013" className="w-full rounded-lg shadow-lg" loading="lazy" /> <figcaption className="mt-2 text-xs text-gray-500 dark:text-gray-400"> Global vegetation composite (NDVI) from Suomi NPP VIIRS (Apr 2012–Apr 2013). High values = dense, healthy vegetation. Source: NASA/NOAA via NASA Earth Observatory (June 19, 2013). © NASA/NOAA. </figcaption> </figure>
-            {/* Body */}
+            <figure className="mb-12">
+              <img
+                src="https://cdn.mos.cms.futurecdn.net/snpjZuM9rU3QQqoZR4vKmJ.jpg.webp"
+                alt="Global vegetation composite (NDVI) from Suomi NPP VIIRS, April 2012–April 2013"
+                className="w-full rounded-lg shadow-lg"
+                loading="lazy"
+              />
+              <figcaption className="mt-2 text-xs text-gray-500 dark:text-gray-400">
+                Global vegetation composite (NDVI) from Suomi NPP VIIRS (Apr 2012–Apr 2013). High values = dense, healthy vegetation. Source: NASA/NOAA via NASA Earth Observatory (June 19, 2013). © NASA/NOAA.
+              </figcaption>
+            </figure>
             <div className="prose prose-lg max-w-none dark:prose-invert">
               <p className="text-xl text-body-color dark:text-body-color-dark mb-8">
                 Vegetation indices compress canopy optics into stable, comparable numbers. Healthy leaves absorb <em>red</em> (chlorophyll) and strongly scatter <em>NIR</em> (leaf structure). Stress reduces red absorption and/or NIR scattering. The goal isn’t a prettier map; it’s a reliable, repeatable signal you can threshold, alert on, and verify in the field.
@@ -195,10 +203,7 @@ CI_re = (NIR / RedEdge) - 1                              // Sentinel-2: RedEdge 
               <h3 className="text-xl font-semibold mb-3">
                 Google Earth Engine — Sentinel-2 NDVI/EVI/EVI2/CIre + compositing + parcel stats
               </h3>
-              <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mb-6 overflow-x-auto">{`// Input: FeatureCollection 'parcels' with a unique 'parcel_id' property
-// Note: For production, replace the QA60 mask with s2cloudless (COPERNICUS/S2_CLOUD_PROBABILITY) + shadow geometry.
-
-var s2sr = ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
+              <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mb-6 overflow-x-auto">{`var s2sr = ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
   .filterBounds(parcels.geometry())
   .filterDate('2025-03-01', '2025-10-31')
   .filter(ee.Filter.lte('CLOUDY_PIXEL_PERCENTAGE', 40))
@@ -208,12 +213,12 @@ var s2sr = ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
     var cirrus = qa.bitwiseAnd(1<<11).neq(0);
     var mask = cloud.or(cirrus).not();
 
-    var red = img.select('B4').multiply(1e-4);    // convert to reflectance if needed
+    var red = img.select('B4').multiply(1e-4);
     var nir = img.select('B8').multiply(1e-4);
     var blue= img.select('B2').multiply(1e-4);
-    var re5 = img.select('B5').multiply(1e-4);    // 705 nm
-    var re6 = img.select('B6').multiply(1e-4);    // 740 nm
-    var re7 = img.select('B7').multiply(1e-4);    // 783 nm
+    var re5 = img.select('B5').multiply(1e-4);
+    var re6 = img.select('B6').multiply(1e-4);
+    var re7 = img.select('B7').multiply(1e-4);
 
     var ndvi = nir.subtract(red).divide(nir.add(red)).rename('NDVI');
     var evi  = nir.subtract(red)
@@ -224,13 +229,12 @@ var s2sr = ee.ImageCollection('COPERNICUS/S2_SR_HARMONIZED')
                   .multiply(2.5)
                   .divide(nir.add(red.multiply(2.4)).add(1))
                   .rename('EVI2');
-    var cire = nir.divide(re5).subtract(1).rename('CIre'); // or use re6/re7 depending on crop
+    var cire = nir.divide(re5).subtract(1).rename('CIre');
 
     return img.updateMask(mask).addBands([ndvi, evi, evi2, cire])
               .set('date', img.date().format('YYYY-MM-dd'));
   });
 
-// 10–16 day rolling median composite (here: 12-day)
 var step = 12;
 var start = ee.Date('2025-03-01');
 var end   = ee.Date('2025-10-31');
@@ -249,7 +253,6 @@ var windows = ee.List.sequence(0, end.difference(start,'day').subtract(step), st
 
 var compCol = ee.ImageCollection.fromImages(windows);
 
-// Per-parcel robust stats (median + p75) per composite
 var reducer = ee.Reducer.median().combine({
   reducer2: ee.Reducer.percentile([75]),
   sharedInputs: true
@@ -259,7 +262,7 @@ var zonal = compCol.map(function(img){
   var stats = img.reduceRegions({
     collection: parcels,
     reducer: reducer,
-    scale: 10,        // 10 m for NDVI/EVI; CIre is 20 m source → mixed res ok for summaries
+    scale: 10,
     tileScale: 4
   }).map(function(f){
     return f.set({
@@ -270,7 +273,6 @@ var zonal = compCol.map(function(img){
   return stats;
 }).flatten();
 
-// Optional: export table for downstream anomaly logic
 Export.table.toDrive({
   collection: zonal,
   description: 'parcel_vi_summaries_2025',
@@ -281,18 +283,19 @@ Export.table.toDrive({
               <h3 className="text-xl font-semibold mb-3">
                 Python — rioxarray + GeoPandas, parcel-level indices & 14-day medians
               </h3>
-              <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mb-6 overflow-x-auto">{`# pip install rioxarray rasterio geopandas xarray numpy pandas
-import xarray as xr, rioxarray as rxr, geopandas as gpd
+              <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mb-6 overflow-x-auto">{`import xarray as xr, rioxarray as rxr, geopandas as gpd
 import numpy as np, pandas as pd
 from pathlib import Path
 
-# Assumptions:
-# - You have pre-aligned, cloud-masked SR COGs for B2,B4,B5,B6,B7,B8 at 10 m (or resampled 20->10)
-# - Filenames like: S2_YYYYMMDD_B4.tif etc.
-cogs_dir = Path("/data/S2_SR") 
+cogs_dir = Path("/data/S2_SR")
 dates = sorted({p.name.split("_")[1] for p in cogs_dir.glob("S2_*_B4.tif")})
+parcels = gpd.read_file("/data/parcels.gpkg").to_crs(32633)
 
-parcels = gpd.read_file("/data/parcels.gpkg").to_crs(32633)  # choose CRS that matches rasters
+def stats(a):
+    d = a.data.compressed() if np.ma.isMaskedArray(a.data) else a.data
+    d = d[np.isfinite(d)]
+    if d.size == 0: return np.nan, np.nan, 0
+    return np.median(d), np.percentile(d, 75), d.size
 
 rows = []
 for d in dates:
@@ -306,32 +309,17 @@ for d in dates:
     evi2 = 2.5 * (nir - red) / (nir + 2.4*red + 1)
     cire = (nir / (re5 + 1e-6)) - 1
 
-    # parcel-wise robust stats
     for _, poly in parcels.iterrows():
         geom = [poly.geometry]
-        ndvi_p = ndvi.rio.clip(geom, ndvi.rio.crs, drop=False)
-        evi_p  = evi.rio.clip(geom, evi.rio.crs, drop=False)
-        evi2_p = evi2.rio.clip(geom, evi2.rio.crs, drop=False)
-        cire_p = cire.rio.clip(geom, cire.rio.crs, drop=False)
-
-        def valid_stats(arr):
-            a = arr.data
-            if np.ma.isMaskedArray(a):
-                a = a.compressed()
-            a = a[np.isfinite(a)]
-            if a.size == 0:
-                return np.nan, np.nan, 0
-            return np.median(a), np.percentile(a, 75), a.size
-
-        ndvi_med, ndvi_p75, n_ndvi = valid_stats(ndvi_p)
-        evi_med,  evi_p75,  _      = valid_stats(evi_p)
-        evi2_med, evi2_p75, _      = valid_stats(evi2_p)
-        cire_med, cire_p75, _      = valid_stats(cire_p)
+        ndvi_med, ndvi_p75, n = stats(ndvi.rio.clip(geom, ndvi.rio.crs, drop=False))
+        evi_med,  evi_p75,  _ = stats(evi.rio.clip(geom, evi.rio.crs, drop=False))
+        evi2_med, evi2_p75, _ = stats(evi2.rio.clip(geom, evi2.rio.crs, drop=False))
+        cire_med, cire_p75, _ = stats(cire.rio.clip(geom, cire.rio.crs, drop=False))
 
         rows.append({
           "date": pd.to_datetime(d),
           "parcel_id": poly["parcel_id"],
-          "ndvi_med": ndvi_med, "ndvi_p75": ndvi_p75, "px_valid": int(n_ndvi),
+          "ndvi_med": ndvi_med, "ndvi_p75": ndvi_p75, "px_valid": int(n),
           "evi_med": evi_med, "evi_p75": evi_p75,
           "evi2_med": evi2_med, "evi2_p75": evi2_p75,
           "cire_med": cire_med, "cire_p75": cire_p75
@@ -339,13 +327,13 @@ for d in dates:
 
 df = pd.DataFrame(rows).sort_values(["parcel_id","date"])
 
-# 14-day rolling medians per parcel (requires regular date index per parcel)
 out = []
 for pid, g in df.groupby("parcel_id"):
     g = g.set_index("date").sort_index()
     g_roll = g.rolling("14D").median()
     g_roll["parcel_id"] = pid
     out.append(g_roll.reset_index())
+
 df_roll = pd.concat(out).sort_values(["parcel_id","date"])
 df_roll.to_csv("/data/parcel_vi_14d.csv", index=False)
 `}</pre>
@@ -353,10 +341,7 @@ df_roll.to_csv("/data/parcel_vi_14d.csv", index=False)
               <h3 className="text-xl font-semibold mb-3">
                 COGs fast path — GDAL to create web-ready tiles
               </h3>
-              <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mb-6 overflow-x-auto">{`# Convert a GeoTIFF to a cloud-optimized GeoTIFF (internal tiling + overviews)
-gdal_translate input.tif output_cog.tif -of COG -co COMPRESS=DEFLATE -co NUM_THREADS=ALL_CPUS
-
-# Build NDVI from aligned Red/NIR (using VRT avoids writing huge intermediates)
+              <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mb-6 overflow-x-auto">{`gdal_translate input.tif output_cog.tif -of COG -co COMPRESS=DEFLATE -co NUM_THREADS=ALL_CPUS
 gdalbuildvrt -separate stack.vrt NIR.tif RED.tif
 gdal_calc.py -A NIR.tif -B RED.tif --calc="(A-B)/(A+B+1e-6)" --outfile NDVI_cog.tif --of COG --co COMPRESS=DEFLATE
 `}</pre>
@@ -364,14 +349,12 @@ gdal_calc.py -A NIR.tif -B RED.tif --calc="(A-B)/(A+B+1e-6)" --outfile NDVI_cog.
               <h3 className="text-xl font-semibold mb-3">
                 PostgreSQL — parcel baselines, anomalies, and alert flags
               </h3>
-              <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mb-6 overflow-x-auto">{`-- Table: parcel_vi_14d(parcel_id, date, ndvi_med, evi_med, cire_med, ...)
--- 1) DOY-aligned multi-year baseline (median within ±15 days)
-WITH hist AS (
+              <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded-md text-sm mb-6 overflow-x-auto">{`WITH hist AS (
   SELECT parcel_id,
          EXTRACT(doy FROM date)::int AS doy,
          ndvi_med
   FROM parcel_vi_14d
-  WHERE date < DATE '2025-01-01'   -- keep history out of current season
+  WHERE date < DATE '2025-01-01'
 ),
 baseline AS (
   SELECT h1.parcel_id, h1.doy AS doy_ref,
@@ -382,7 +365,6 @@ baseline AS (
    AND h2.doy BETWEEN h1.doy - 15 AND h1.doy + 15
   GROUP BY h1.parcel_id, h1.doy
 )
--- 2) Join current season & compute anomalies + simple alerts
 SELECT cur.parcel_id,
        cur.date,
        cur.ndvi_med,
@@ -416,7 +398,6 @@ ORDER BY cur.parcel_id, cur.date;
                 <li><strong>APIs:</strong> serve COGs via TiTiler/WMTS/XYZ; parcel metrics via REST/GraphQL; push alerts via webhook.</li>
               </ul>
 
-              {/* CTA */}
               <div className="bg-primary/5 dark:bg-primary/10 p-8 rounded-lg mt-12">
                 <h3 className="text-2xl font-bold text-black dark:text-white mb-4">Operationalize indices with SaltGIS</h3>
                 <p className="text-base text-body-color dark:text-body-color-dark mb-6">
@@ -438,7 +419,6 @@ ORDER BY cur.parcel_id, cur.date;
                 </div>
               </div>
 
-              {/* References */}
               <h2 className="text-3xl font-bold text-black dark:text-white mb-6 mt-12">References</h2>
               <ul className="list-disc pl-6 space-y-3">
                 <li>NASA Earth Observatory — “Measuring Vegetation (NDVI &amp; EVI)”. <a target="_blank" rel="noopener noreferrer" href="https://earthobservatory.nasa.gov/features/MeasuringVegetation">Link</a>.</li>
