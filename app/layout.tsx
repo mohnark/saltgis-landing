@@ -9,7 +9,7 @@ import "../styles/index.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "SaltGIS — Software for Advanced Location Technologies in Geographic Information Systems",
+  title: "SaltGIS",
   description: "SaltGIS develops innovative software that transforms complex spatial data into clear, actionable intelligence. Our mission is to equip organizations with tools that make land, infrastructure, and resource management smarter, faster, and more precise.",
   keywords: ["GIS", "Geographic Information Systems", "Location Intelligence", "Spatial Data", "SaltGIS", "Geospatial Software"],
   authors: [{ name: "SaltGIS" }],
@@ -30,7 +30,7 @@ export const metadata = {
     apple: "/images/LogoRectangleClipped.png",
   },
   openGraph: {
-    title: "SaltGIS — Software for Advanced Location Technologies in Geographic Information Systems",
+    title: "SaltGIS",
     description: "SaltGIS develops innovative software that transforms complex spatial data into clear, actionable intelligence.",
     url: "https://saltgis.eu",
     siteName: "SaltGIS",
@@ -39,7 +39,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaltGIS — Software for Advanced Location Technologies in Geographic Information Systems",
+    title: "SaltGIS",
     description: "SaltGIS develops innovative software that transforms complex spatial data into clear, actionable intelligence.",
     creator: "@saltgis",
   },

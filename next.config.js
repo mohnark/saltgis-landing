@@ -13,6 +13,11 @@ const nextConfig = {
         hostname: "images.unsplash.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.mos.cms.futurecdn.net",
+        port: "",
+      },
     ],
   },
 };
