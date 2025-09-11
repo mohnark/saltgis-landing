@@ -229,13 +229,6 @@ const BlogPost = () => {
                     <Callout title="Known limitations">
                       Northern winters are data‑sparse; geometry updates can lag; thresholds need crop/region tuning. QA and documentation reduce audit risk.
                     </Callout>
-                    <Method title="Pilot: TerraLens (concept)">
-                      <ul className="list-disc pl-5">
-                        <li>Chat‑to‑map: navigate, load parcels (zones/fields/AOIs), and request analytics via natural language.</li>
-                        <li>Per‑field indices: NDVI/EVI2/CIred‑edge, anomalies vs seasonal baseline.</li>
-                        <li>Compliance views: buffer widths, winter cover status, mowing windows (where guidance allows).</li>
-                      </ul>
-                    </Method>
                   </div>
                 </div>
               </section>
