@@ -6,7 +6,7 @@ const blogData: Blog[] = [
     title: "Agriculture in Europe: Policy, Practice, and the Role of GIS",
     paragraph:
       "Explore how European agriculture differs from global models, why the Common Agricultural Policy (CAP) shapes every farm decision, and how GIS and remote sensing help farmers stay compliant, sustainable, and profitable.",
-    image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    image: "/images/blog/cap-euro.png",
     author: {
       name: "SaltGIS Team",
       image: "/images/LogoRectangleClipped.png",
