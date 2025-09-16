@@ -4,16 +4,16 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Products() {
-  const [active, setActive] = useState<"TerraFlow" | "GeoFlow">("TerraFlow");
+  const [active, setActive] = useState<"TerraLens" | "GeoFlow">("TerraLens");
 
   const products = [
     {
-      key: "TerraFlow" as const,
-      title: "TerraFlow",
+      key: "TerraLens" as const,
+      title: "TerraLens",
       subtitle: "AI Field Intelligence for Agriculture",
       description:
-        "Ask, analyze, and act. TerraFlow turns satellite pixels and parcel data into actionable decisions with an AI-first UX.",
-      videoSrc: "/images/video/terraflow-demo-1.mp4",
+        "Ask, analyze, and act. TerraLens turns satellite pixels and parcel data into actionable decisions with an AI-first UX.",
+      videoSrc: "/images/video/terralens-demo-1.mp4",
       features: [
         {
           title: "AI-Powered Field Analysis",
@@ -71,7 +71,7 @@ export default function Products() {
         ],
       },
       cta: {
-        headline: "See TerraFlow in action.",
+        headline: "See TerraLens in action.",
         sub: "The fastest way to go from pixels to decisions.",
       },
     },
@@ -182,8 +182,8 @@ export default function Products() {
           ))}
         </div>
 
-        {/* TerraFlow Hero Video */}
-        {product.key === "TerraFlow" && (
+        {/* TerraLens Hero Video */}
+        {product.key === "TerraLens" && (
           <div className="mb-12">
             <div className="relative mx-auto max-w-6xl overflow-hidden rounded-2xl border border-black/5 dark:border-white/10 shadow-2xl">
               <video
@@ -194,7 +194,7 @@ export default function Products() {
                 loop
                 autoPlay
                 controls
-                poster="/images/video/poster-terraflow.jpg"
+                poster="/images/video/poster-terralens.jpg"
               />
               {/* Glow edge */}
               <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-black/10 dark:ring-white/10" />
