@@ -1,5 +1,5 @@
 /**
- * Animated "TerraLens" dashboard mock — pure CSS/SVG, no client JS.
+ * Animated "TerraLens" dashboard mock - pure CSS/SVG, no client JS.
  * Sells the product visually: NDVI parcels, live scan beam, alert pin.
  */
 const HeroVisual = () => {
@@ -8,7 +8,7 @@ const HeroVisual = () => {
       {/* Glow behind the card */}
       <div className="absolute -inset-8 rounded-[40px] bg-gradient-to-tr from-primary/25 via-saltgis-green-light/10 to-transparent blur-3xl" />
 
-      {/* Floating chip — alert */}
+      {/* Floating chip -alert */}
       <div className="absolute -left-4 top-10 z-20 hidden animate-float rounded-xl border border-stroke bg-white/90 px-4 py-3 shadow-card backdrop-blur-md dark:border-stroke-dark dark:bg-dark/90 sm:block">
         <div className="flex items-center gap-2.5">
           <span className="relative flex h-2.5 w-2.5">
@@ -26,7 +26,7 @@ const HeroVisual = () => {
         </div>
       </div>
 
-      {/* Floating chip — outcome */}
+      {/* Floating chip -outcome */}
       <div className="absolute -right-2 bottom-12 z-20 hidden animate-float-slow rounded-xl border border-stroke bg-white/90 px-4 py-3 shadow-card backdrop-blur-md dark:border-stroke-dark dark:bg-dark/90 sm:block">
         <p className="font-heading text-lg font-bold leading-none text-primary">
           −30%
@@ -79,10 +79,10 @@ const HeroVisual = () => {
             <span className="relative block h-3 w-3 rounded-full border-2 border-white bg-yellow shadow" />
           </div>
 
-          {/* NDVI legend */}
-          <div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-lg border border-stroke bg-white/85 px-3 py-1.5 backdrop-blur-sm dark:border-stroke-dark dark:bg-dark/85">
+          {/* Vegetation Health legend */}
+          <div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-lg border border-stroke bg-white/60 px-3 py-1.5 backdrop-blur-md dark:border-stroke-dark dark:bg-dark/60">
             <span className="text-[10px] font-semibold uppercase tracking-wide text-body-color dark:text-body-color-dark">
-              NDVI
+              Vegetation Health
             </span>
             <span className="h-1.5 w-20 rounded-full bg-gradient-to-r from-yellow via-[#A4D9A0] to-primary-dark" />
           </div>
@@ -91,9 +91,9 @@ const HeroVisual = () => {
         {/* Stat strip */}
         <div className="grid grid-cols-3 divide-x divide-stroke border-t border-stroke dark:divide-stroke-dark dark:border-stroke-dark">
           {[
-            { label: "Avg. NDVI", value: "0.82", trend: "▲ 0.04" },
-            { label: "Parcels", value: "128", trend: "monitored" },
-            { label: "Alerts", value: "3", trend: "this week" },
+            { label: "Routine Monitoring", value: "", trend: "▲" },
+            { label: "Large Scale", value: "", trend: "" },
+            { label: "Real Time Alerts", value: "", trend: "" },
           ].map((stat) => (
             <div key={stat.label} className="px-4 py-3.5 text-center">
               <p className="font-heading text-lg font-bold leading-none text-black dark:text-white">

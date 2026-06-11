@@ -8,7 +8,7 @@ const products = [
     name: "TerraLens",
     tagline: "AI Field Intelligence for Agriculture",
     pitch:
-      "Ask your fields a question in plain language and get maps, metrics, and clear answers in seconds. NDVI, time-series, parcel health scores, and geo-pinned tasks — without a GIS specialist on staff.",
+      "Ask your fields a question in plain language and get maps, metrics, and clear answers in seconds. NDVI, time-series, parcel health scores, and geo-pinned tasks -without a GIS specialist on staff.",
     outcomes: [
       "Spot crop stress weeks before it costs you yield",
       "From satellite pixels to a decision in minutes, not days",
@@ -19,21 +19,21 @@ const products = [
     icon: Satellite,
     accent: "from-primary to-saltgis-green-light",
   },
-  {
-    name: "GeoFlow",
-    tagline: "The Smart Way to Manage Geospatial Projects",
-    pitch:
-      "Projects, crews, clients, and hours — all pinned to real land parcels on one map. Replace the spreadsheet sprawl with a single dashboard that shows you exactly where every job stands.",
-    outcomes: [
-      "Every project's status visible on the map at a glance",
-      "Crew hours and attendance tracked automatically",
-      "Client inquiries to active jobs in one workflow",
-    ],
-    cta: "Try GeoFlow",
-    badge: "For field operations",
-    icon: Workflow,
-    accent: "from-saltgis-green-dark to-primary",
-  },
+  // {
+  //   name: "GeoFlow",
+  //   tagline: "The Smart Way to Manage Geospatial Projects",
+  //   pitch:
+  //     "Projects, crews, clients, and hours -all pinned to real land parcels on one map. Replace the spreadsheet sprawl with a single dashboard that shows you exactly where every job stands.",
+  //   outcomes: [
+  //     "Every project's status visible on the map at a glance",
+  //     "Crew hours and attendance tracked automatically",
+  //     "Client inquiries to active jobs in one workflow",
+  //   ],
+  //   cta: "Try GeoFlow",
+  //   badge: "For field operations",
+  //   icon: Workflow,
+  //   accent: "from-saltgis-green-dark to-primary",
+  // },
 ];
 
 const ProductsShowcase = () => {

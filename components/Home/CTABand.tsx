@@ -43,7 +43,7 @@ const CTABand = () => {
             </h2>
             <p className="relative mx-auto mb-10 max-w-2xl text-base text-white/75 md:text-lg">
               Book a free consultation and walk away with a concrete assessment
-              of what your data can do — quick wins, a roadmap, and budget
+              of what your data can do -quick wins, a roadmap, and budget
               ranges. No commitment, no jargon, reply within 24 hours.
             </p>
             <div className="relative flex flex-col items-center justify-center gap-4 sm:flex-row">

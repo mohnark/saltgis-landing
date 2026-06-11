@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Products() {
-  const [active, setActive] = useState<"TerraLens" | "GeoFlow">("TerraLens");
+  const [active, setActive] = useState<"TerraLens">("TerraLens");
 
   const products = [
     {
@@ -45,7 +45,7 @@ export default function Products() {
         {
           title: "Indices & Time‑Series",
           description:
-            "From NDVI to Red‑Edge Chlorophyll — compare dates, spot anomalies, and track trends.",
+            "From NDVI to Red‑Edge Chlorophyll -compare dates, spot anomalies, and track trends.",
           details: [
             "Rapid index library (NDVI, CIred‑edge, NDWI, more)",
             "Date‑to‑date change maps",
@@ -56,7 +56,7 @@ export default function Products() {
         {
           title: "Smart Tasking & Notes",
           description:
-            "Turn insights into action—create geo‑pinned tasks and field notes right on the map.",
+            "Turn insights into action - create geo-pinned tasks and field notes right on the map.",
           details: [
             "One‑click notes on any pixel",
             "Assign to field crews",
@@ -80,78 +80,78 @@ export default function Products() {
         sub: "The fastest way to go from pixels to decisions.",
       },
     },
-    {
-      key: "GeoFlow" as const,
-      title: "GeoFlow",
-      subtitle: "The Smart Way to Manage Geospatial Projects",
-      description:
-        "From the field to the dashboard – streamline everything in one intelligent platform.",
-      outcomes: [
-        { kpi: "One map", label: "replaces project spreadsheets, timesheets, and CRM" },
-        { kpi: "Real time", label: "visibility into every job, crew, and client" },
-        { kpi: "Hours saved", label: "every week on admin and status chasing" },
-      ],
-      features: [
-        {
-          title: "Map-Based Project Management",
-          description:
-            "Visualize and manage projects linked to real land parcels. Track project status, location, and progress directly from the map interface.",
-          details: [
-            "Search addresses",
-            "Drop project pins",
-            "Change project statuses on the fly",
-            "Filter by location, job number, or status",
-          ],
-        },
-        {
-          title: "Employee & Contractor Management",
-          description:
-            "Add, track, and update employee or contractor records with full control and visibility.",
-          details: [
-            "Define custom roles: Admin, Technician, Field Crew",
-            "Log attendance with check-in/out tracking",
-            "View total hours worked",
-            "Maintain SSNs, contact info, addresses, and contractor types",
-          ],
-        },
-        {
-          title: "Client & Inquiry Tracking",
-          description:
-            "Easily onboard clients and log their project inquiries from a simple, intuitive interface.",
-          details: [
-            "Streamlined client onboarding",
-            "Project inquiry management",
-            "Client communication tracking",
-            "Automated follow-up reminders",
-          ],
-        },
-        {
-          title: "Smart Admin Dashboard",
-          description:
-            "One glance gives you everything you need to know about your operations.",
-          details: [
-            "Real-time project status distribution",
-            "Daily hours logged by team",
-            "Quick insights into resource load and team activity",
-            "Performance metrics and analytics",
-          ],
-        },
-      ],
-      comingSoon: {
-        title: "AI-Powered Search & Automation (Coming Soon)",
-        description: "Accelerate operations with built-in AI assistance.",
-        features: [
-          'Natural language search: "Show me all pending fieldwork in Austin"',
-          "Auto-suggest project locations from map context",
-          "Intelligent matching of clients, parcels, and projects",
-          "Predictive status updates and risk alerts",
-        ],
-      },
-      cta: {
-        headline: "Power your geospatial workflows with GeoFlow.",
-        sub: "Try the future of project management, today.",
-      },
-    },
+    // {
+    //   key: "GeoFlow" as const,
+    //   title: "GeoFlow",
+    //   subtitle: "The Smart Way to Manage Geospatial Projects",
+    //   description:
+    //     "From the field to the dashboard – streamline everything in one intelligent platform.",
+    //   outcomes: [
+    //     { kpi: "One map", label: "replaces project spreadsheets, timesheets, and CRM" },
+    //     { kpi: "Real time", label: "visibility into every job, crew, and client" },
+    //     { kpi: "Hours saved", label: "every week on admin and status chasing" },
+    //   ],
+    //   features: [
+    //     {
+    //       title: "Map-Based Project Management",
+    //       description:
+    //         "Visualize and manage projects linked to real land parcels. Track project status, location, and progress directly from the map interface.",
+    //       details: [
+    //         "Search addresses",
+    //         "Drop project pins",
+    //         "Change project statuses on the fly",
+    //         "Filter by location, job number, or status",
+    //       ],
+    //     },
+    //     {
+    //       title: "Employee & Contractor Management",
+    //       description:
+    //         "Add, track, and update employee or contractor records with full control and visibility.",
+    //       details: [
+    //         "Define custom roles: Admin, Technician, Field Crew",
+    //         "Log attendance with check-in/out tracking",
+    //         "View total hours worked",
+    //         "Maintain SSNs, contact info, addresses, and contractor types",
+    //       ],
+    //     },
+    //     {
+    //       title: "Client & Inquiry Tracking",
+    //       description:
+    //         "Easily onboard clients and log their project inquiries from a simple, intuitive interface.",
+    //       details: [
+    //         "Streamlined client onboarding",
+    //         "Project inquiry management",
+    //         "Client communication tracking",
+    //         "Automated follow-up reminders",
+    //       ],
+    //     },
+    //     {
+    //       title: "Smart Admin Dashboard",
+    //       description:
+    //         "One glance gives you everything you need to know about your operations.",
+    //       details: [
+    //         "Real-time project status distribution",
+    //         "Daily hours logged by team",
+    //         "Quick insights into resource load and team activity",
+    //         "Performance metrics and analytics",
+    //       ],
+    //     },
+    //   ],
+    //   comingSoon: {
+    //     title: "AI-Powered Search & Automation (Coming Soon)",
+    //     description: "Accelerate operations with built-in AI assistance.",
+    //     features: [
+    //       'Natural language search: "Show me all pending fieldwork in Austin"',
+    //       "Auto-suggest project locations from map context",
+    //       "Intelligent matching of clients, parcels, and projects",
+    //       "Predictive status updates and risk alerts",
+    //     ],
+    //   },
+    //   cta: {
+    //     headline: "Power your geospatial workflows with GeoFlow.",
+    //     sub: "Try the future of project management, today.",
+    //   },
+    // },
   ];
 
   const product = products.find((p) => p.key === active)!;
@@ -175,7 +175,7 @@ export default function Products() {
             Software That Turns Spatial Data Into Profit
           </h2>
           <p className="max-w-3xl text-base md:text-lg text-body-color dark:text-body-color-dark">
-            Two platforms built for people who manage land, crews, and crops — not for GIS specialists.
+            Two platforms built for people who manage land, crews, and crops -not for GIS specialists.
             Pick your tool, see a demo, and be running this week.
           </p>
         </div>

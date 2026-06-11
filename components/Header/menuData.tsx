@@ -25,11 +25,11 @@ const menuData: Menu[] = [
     path: "/products",
         newTab: false,
       },
-      {
-    id: 5,
-    title: "Blog",
-        path: "/blog",
-        newTab: false,
-  },
+  // {
+  //   id: 5,
+  //   title: "Blog",
+  //   path: "/blog",
+  //   newTab: false,
+  // },
 ];
 export default menuData;

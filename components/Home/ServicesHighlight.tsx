@@ -8,7 +8,7 @@ const services = [
   {
     title: "Web GIS Applications",
     description:
-      "Custom map-based platforms for land management, monitoring, and infrastructure — built on PostGIS, MapLibre, and Deck.gl, ready for the field and the boardroom.",
+      "Custom map-based platforms for land management, monitoring, and infrastructure -built on PostGIS, MapLibre, and Deck.gl, ready for the field and the boardroom.",
     result: "Production-ready in 4–8 weeks",
     icon: Map,
   },
@@ -22,7 +22,7 @@ const services = [
   {
     title: "Automation Pipelines",
     description:
-      "Satellite and sensor data ingestion, validation, and delivery — integrated with your ERP, CRM, and cloud. Stop paying people to copy-paste shapefiles.",
+      "Satellite and sensor data ingestion, validation, and delivery -integrated with your ERP, CRM, and cloud. Stop paying people to copy-paste shapefiles.",
     result: "30%+ less manual GIS work",
     icon: Cog,
   },
@@ -59,7 +59,7 @@ const ServicesHighlight = () => {
         <SectionTitle
           eyebrow="Services"
           title="Services That Pay for Themselves"
-          paragraph="We don't sell billable hours — we sell outcomes. Every engagement starts with the question: what decision will this system improve, and what is that worth to you?"
+          paragraph="We don't sell billable hours -we sell outcomes. Every engagement starts with the question: what decision will this system improve, and what is that worth to you?"
           center
         />
 

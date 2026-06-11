@@ -39,7 +39,7 @@ const Hero = () => {
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-10">
           {/* Copy */}
           <div className="mx-auto max-w-[640px] text-center lg:mx-0 lg:text-left">
-            <Reveal>
+            {/* <Reveal>
               <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary shadow-sm dark:border-primary/30 dark:bg-primary/10">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" />
@@ -47,7 +47,7 @@ const Hero = () => {
                 </span>
                 GIS software &amp; services for teams that work with land
               </span>
-            </Reveal>
+            </Reveal> */}
 
             <Reveal delay={100}>
               <h1 className="mb-6 font-heading text-4xl font-bold leading-[1.08] tracking-tight text-black dark:text-white sm:text-5xl xl:text-[58px]">
@@ -63,8 +63,7 @@ const Hero = () => {
                 SaltGIS builds the dashboards, Web GIS platforms, and automation
                 pipelines that turn raw spatial data into answers for
                 agriculture, infrastructure, and urban planning. First
-                production dashboard in under 6 weeks. Manual GIS work cut by
-                30% or more.
+                production dashboard in under 6 weeks. Cuts manual effort.
               </p>
             </Reveal>
 

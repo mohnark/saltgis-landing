@@ -68,7 +68,7 @@ const AboutSectionOne = () => {
               >
                 <Image
                   src="/images/about/about-image.png"
-                  alt="SaltGIS—map interfaces, analytics, and remote-sensing layers"
+                  alt="SaltGIS -map interfaces, analytics, and remote-sensing layers"
                   width={520}
                   height={500}
                   priority
@@ -76,7 +76,7 @@ const AboutSectionOne = () => {
                 />
                 <Image
                   src="/images/about/about-image-dark.png"
-                  alt="SaltGIS—map interfaces, analytics, and remote-sensing layers (dark mode)"
+                  alt="SaltGIS -map interfaces, analytics, and remote-sensing layers (dark mode)"
                   width={520}
                   height={500}
                   priority
