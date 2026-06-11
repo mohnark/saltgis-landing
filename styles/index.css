@@ -1,12 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body), "Inter", sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading), var(--font-body), sans-serif;
+  }
+
+  ::selection {
+    background-color: rgba(17, 140, 79, 0.85);
+    color: #fff;
   }
 }
 
@@ -29,5 +45,56 @@
 
   input#checkboxLabel:checked ~ .box span {
     @apply opacity-100;
+  }
+}
+
+@layer utilities {
+  /* Gradient headline text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-saltgis-green-light to-primary bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  /* Scroll-reveal primitives (driven by components/Common/Reveal.tsx) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98),
+      transform 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98);
+    will-change: opacity, transform;
+  }
+
+  .reveal-left {
+    transform: translateX(-28px);
+  }
+
+  .reveal-right {
+    transform: translateX(28px);
+  }
+
+  .reveal-scale {
+    transform: scale(0.94);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+
+    .animate-float,
+    .animate-float-slow,
+    .animate-scan,
+    .animate-marquee,
+    .animate-spin-slow {
+      animation: none !important;
+    }
   }
 }

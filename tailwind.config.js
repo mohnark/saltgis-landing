@@ -32,6 +32,10 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
+      fontFamily: {
+        heading: ["var(--font-heading)", "Inter", "sans-serif"],
+        sans: ["var(--font-body)", "Inter", "sans-serif"],
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",
@@ -54,6 +58,56 @@ module.exports = {
         "saltgis-green-dark": "#16a34a",
       },
 
+      dropShadow: {
+        three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-7px)" },
+        },
+        scan: {
+          "0%": { transform: "translateY(-10%)", opacity: "0" },
+          "12%": { opacity: "1" },
+          "88%": { opacity: "1" },
+          "100%": { transform: "translateY(420%)", opacity: "0" },
+        },
+        "pulse-dot": {
+          "0%": { transform: "scale(1)", opacity: "0.9" },
+          "70%": { transform: "scale(2.6)", opacity: "0" },
+          "100%": { transform: "scale(2.6)", opacity: "0" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        "draw-line": {
+          from: { strokeDashoffset: "600" },
+          to: { strokeDashoffset: "0" },
+        },
+      },
+      animation: {
+        float: "float 6s ease-in-out infinite",
+        "float-slow": "float-slow 8s ease-in-out infinite",
+        scan: "scan 5s ease-in-out infinite",
+        "pulse-dot": "pulse-dot 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        marquee: "marquee 32s linear infinite",
+        shimmer: "shimmer 3.5s linear infinite",
+        "spin-slow": "spin-slow 24s linear infinite",
+        "draw-line": "draw-line 2.4s ease-out forwards",
+      },
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
         one: "0px 2px 3px rgba(7, 7, 77, 0.05)",
@@ -67,9 +121,11 @@ module.exports = {
         btn: "0px 1px 2px rgba(4, 10, 34, 0.15)",
         "btn-hover": "0px 1px 2px rgba(0, 0, 0, 0.15)",
         "btn-light": "0px 1px 2px rgba(0, 0, 0, 0.1)",
-      },
-      dropShadow: {
-        three: "0px 5px 15px rgba(6, 8, 15, 0.05)",
+        glow: "0 0 40px rgba(17, 140, 79, 0.35)",
+        "glow-sm": "0 0 24px rgba(17, 140, 79, 0.25)",
+        card: "0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.06)",
+        "card-hover":
+          "0 2px 4px rgba(16, 24, 40, 0.06), 0 20px 48px rgba(17, 140, 79, 0.14)",
       },
     },
   },

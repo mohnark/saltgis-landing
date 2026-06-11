@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Satellite, Workflow, Check, ArrowRight } from "lucide-react";
 import SectionTitle from "../Common/SectionTitle";
+import Reveal from "../Common/Reveal";
 
 const products = [
   {
@@ -14,6 +16,8 @@ const products = [
     ],
     cta: "See TerraLens in Action",
     badge: "For agriculture",
+    icon: Satellite,
+    accent: "from-primary to-saltgis-green-light",
   },
   {
     name: "GeoFlow",
@@ -27,75 +31,84 @@ const products = [
     ],
     cta: "Try GeoFlow",
     badge: "For field operations",
+    icon: Workflow,
+    accent: "from-saltgis-green-dark to-primary",
   },
 ];
 
 const ProductsShowcase = () => {
   return (
-    <section id="products" className="py-16 md:py-20 lg:py-24">
+    <section id="products" className="relative py-16 md:py-20 lg:py-24">
       <div className="container">
         <SectionTitle
-          title="Products Built to Sell Decisions, Not Just Maps"
+          eyebrow="Products"
+          title="Built to Sell Decisions, Not Just Maps"
           paragraph="Two platforms, one goal: get your team from raw spatial data to confident action faster than any spreadsheet or legacy GIS ever could."
           center
         />
 
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {products.map((product) => (
-            <div
-              key={product.name}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-stroke bg-white p-8 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:border-stroke-dark dark:bg-dark md:p-10"
-            >
-              <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full bg-primary/5 blur-2xl transition-colors group-hover:bg-primary/10" />
-              <span className="mb-4 inline-block w-fit rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
-                {product.badge}
-              </span>
-              <h3 className="mb-1 text-2xl font-bold text-black dark:text-white md:text-3xl">
-                {product.name}
-              </h3>
-              <p className="mb-4 text-base font-semibold text-primary">
-                {product.tagline}
-              </p>
-              <p className="mb-6 text-base text-body-color dark:text-body-color-dark">
-                {product.pitch}
-              </p>
-              <ul className="mb-8 space-y-3">
-                {product.outcomes.map((outcome) => (
-                  <li
-                    key={outcome}
-                    className="flex items-start text-base text-body-color dark:text-body-color-dark"
+          {products.map((product, index) => (
+            <Reveal key={product.name} delay={index * 120} className="h-full">
+              <div className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-stroke bg-white p-8 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/30 hover:shadow-card-hover dark:border-stroke-dark dark:bg-dark md:p-10">
+                {/* Top accent line */}
+                <span
+                  className={`absolute inset-x-0 top-0 h-1 bg-gradient-to-r ${product.accent} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
+                />
+                <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full bg-primary/5 blur-2xl transition-colors duration-300 group-hover:bg-primary/15" />
+
+                <div className="mb-6 flex items-center justify-between">
+                  <div
+                    className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${product.accent} text-white shadow-glow-sm transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3`}
                   >
-                    <svg
-                      className="mr-3 mt-1 h-5 w-5 shrink-0 text-primary"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      aria-hidden="true"
+                    <product.icon className="h-7 w-7" strokeWidth={1.75} />
+                  </div>
+                  <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
+                    {product.badge}
+                  </span>
+                </div>
+
+                <h3 className="mb-1 font-heading text-2xl font-bold text-black dark:text-white md:text-3xl">
+                  {product.name}
+                </h3>
+                <p className="mb-4 text-base font-semibold text-primary">
+                  {product.tagline}
+                </p>
+                <p className="mb-6 text-base text-body-color dark:text-body-color-dark">
+                  {product.pitch}
+                </p>
+
+                <ul className="mb-8 space-y-3">
+                  {product.outcomes.map((outcome) => (
+                    <li
+                      key={outcome}
+                      className="flex items-start text-base text-body-color dark:text-body-color-dark"
                     >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    {outcome}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-auto flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/products"
-                  className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-semibold text-white transition hover:bg-primary/80"
-                >
-                  {product.cta}
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-lg border border-primary px-6 py-3 text-base font-semibold text-primary transition hover:bg-primary hover:text-white"
-                >
-                  Request a Demo
-                </Link>
+                      <span className="mr-3 mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <Check className="h-3 w-3" strokeWidth={3} />
+                      </span>
+                      {outcome}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-auto flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href="/products"
+                    className="group/cta inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-base font-semibold text-white transition-all duration-300 hover:bg-primary-dark hover:shadow-glow-sm"
+                  >
+                    {product.cta}
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/cta:translate-x-1" />
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-xl border border-primary/40 px-6 py-3 text-base font-semibold text-primary transition-all duration-300 hover:border-primary hover:bg-primary hover:text-white"
+                  >
+                    Request a Demo
+                  </Link>
+                </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

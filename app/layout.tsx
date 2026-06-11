@@ -2,11 +2,16 @@ import { Providers } from "./providers";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
-import { Inter } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-heading",
+});
 
 export const metadata = {
   title: "SaltGIS",
@@ -69,7 +74,9 @@ export default function RootLayout({
       */}
       <head />
 
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <body
+        className={`bg-[#FCFCFC] font-sans dark:bg-black ${inter.variable} ${spaceGrotesk.variable}`}
+      >
         <Providers>
           <Header />
           {children}

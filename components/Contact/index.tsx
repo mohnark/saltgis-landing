@@ -31,7 +31,7 @@ const Contact = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div
-              className="wow fadeInUp shadow-three dark:bg-gray-dark mb-12 rounded-2xl border border-stroke bg-white px-8 py-11 dark:border-stroke-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
+              className="shadow-card dark:bg-gray-dark mb-12 rounded-3xl border border-stroke bg-white px-8 py-11 dark:border-stroke-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s"
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
@@ -56,7 +56,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         placeholder="Enter your name"
-                        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-lg border bg-gray-light px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-xl border bg-gray-light px-6 py-3 text-base text-body-color outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                         required
                       />
                     </div>
@@ -75,7 +75,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="Enter your email"
-                        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-lg border bg-gray-light px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-xl border bg-gray-light px-6 py-3 text-base text-body-color outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                         required
                       />
                     </div>
@@ -94,7 +94,7 @@ const Contact = () => {
                         onChange={handleInputChange}
                         rows={5}
                         placeholder="Tell us about your geospatial project needs..."
-                        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full resize-none rounded-lg border bg-gray-light px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                        className="border-stroke dark:text-body-color-dark dark:shadow-two w-full resize-none rounded-xl border bg-gray-light px-6 py-3 text-base text-body-color outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                         required
                       ></textarea>
                     </div>
@@ -102,7 +102,7 @@ const Contact = () => {
                   <div className="w-full px-4">
                     <button 
                       type="submit"
-                      className="shadow-submit dark:shadow-submit-dark rounded-lg bg-primary px-9 py-4 text-base font-semibold text-white duration-300 hover:bg-primary-dark"
+                      className="rounded-xl bg-primary px-9 py-4 text-base font-semibold text-white shadow-glow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-glow"
                     >
                       Send Message
                     </button>
@@ -112,12 +112,12 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <div className="wow fadeInUp shadow-three dark:bg-gray-dark rounded-2xl border border-stroke bg-white px-8 py-11 dark:border-stroke-dark sm:p-[55px] lg:px-8 xl:p-[55px]">
+            <div className="shadow-card dark:bg-gray-dark rounded-3xl border border-stroke bg-white px-8 py-11 dark:border-stroke-dark sm:p-[55px] lg:px-8 xl:p-[55px]">
               <h3 className="mb-4 text-2xl font-bold text-black dark:text-white">
                 Contact Information
               </h3>
               <div className="mb-8 flex w-full max-w-[370px]">
-                <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 sm:mr-6 lg:mr-6 xl:mr-6">
+                <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded-xl bg-primary/10 text-primary sm:mr-6 lg:mr-6 xl:mr-6">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.3333 9.41667C18.3333 13.75 14.75 17.3333 10.4167 17.3333C6.08333 17.3333 2.5 13.75 2.5 9.41667C2.5 5.08333 6.08333 1.5 10.4167 1.5C14.75 1.5 18.3333 5.08333 18.3333 9.41667Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M13.3333 12.5C12.5 12.5 11.6667 12.0833 11.0833 11.5C10.5 10.9167 10.0833 10.0833 10.0833 9.25C10.0833 8.41667 10.5 7.58333 11.0833 7C11.6667 6.41667 12.5 6 13.3333 6C14.1667 6 15 6.41667 15.5833 7C16.1667 7.58333 16.5833 8.41667 16.5833 9.25C16.5833 10.0833 16.1667 10.9167 15.5833 11.5C15 12.0833 14.1667 12.5 13.3333 12.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -133,7 +133,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="mb-8 flex w-full max-w-[370px]">
-                <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 sm:mr-6 lg:mr-6 xl:mr-6">
+                <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded-xl bg-primary/10 text-primary sm:mr-6 lg:mr-6 xl:mr-6">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.5 14.1667V16.6667C17.5 17.1087 17.3244 17.5326 17.0118 17.8452C16.6993 18.1577 16.2754 18.3333 15.8333 18.3333C13.9924 18.3333 12.1955 17.8571 10.6483 16.9444C9.10107 16.0317 7.85797 14.7143 7.03647 13.1289C6.21497 11.5435 5.83333 9.74456 5.83333 7.91667C5.83333 6.08878 6.21497 4.28982 7.03647 2.70441C7.85797 1.119 9.10107 -0.198413 10.6483 -1.11111C12.1955 -2.02381 13.9924 -2.5 15.8333 -2.5C16.2754 -2.5 16.6993 -2.3244 17.0118 -2.0118C17.3244 -1.6992 17.5 -1.27529 17.5 -0.833333V1.66667C17.5 2.10871 17.3244 2.53264 17.0118 2.84518C16.6993 3.15772 16.2754 3.33333 15.8333 3.33333C14.75 3.33333 13.7 3.6875 12.8 4.35C11.9 5.0125 11.2 5.95 10.8 7.06667C10.4 8.18333 10.3 9.41667 10.5 10.6167C10.7 11.8167 11.2 12.9333 11.9333 13.85C12.6667 14.7667 13.6 15.45 14.6333 15.8333C15.6667 16.2167 16.75 16.25 17.5 16.25" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -148,7 +148,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="mb-8 flex w-full max-w-[370px]">
-                <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 sm:mr-6 lg:mr-6 xl:mr-6">
+                <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded-xl bg-primary/10 text-primary sm:mr-6 lg:mr-6 xl:mr-6">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10C2 5.59 5.59 2 10 2C14.41 2 18 5.59 18 10C18 14.41 14.41 18 10 18Z" fill="currentColor"/>
                     <path d="M10 4C7.79 4 6 5.79 6 8C6 10.21 7.79 12 10 12C12.21 12 14 10.21 14 8C14 5.79 12.21 4 10 4ZM10 10C8.9 10 8 9.1 8 8C8 6.9 8.9 6 10 6C11.1 6 12 6.9 12 8C12 9.1 11.1 10 10 10Z" fill="currentColor"/>
