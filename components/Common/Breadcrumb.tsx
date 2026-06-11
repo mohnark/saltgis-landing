@@ -45,7 +45,7 @@ const Breadcrumb = ({ items, pageName, className }: BreadcrumbProps) => {
                 {c.href && !isLast ? (
                   <Link
                     href={c.href}
-                    className="text-slate-600 hover:text-[#1B3B6F] dark:text-slate-300 dark:hover:text-[#4CAF50]"
+                    className="text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary"
                   >
                     {c.label}
                   </Link>
@@ -53,7 +53,7 @@ const Breadcrumb = ({ items, pageName, className }: BreadcrumbProps) => {
                   <span
                     className={`truncate ${
                       isLast
-                        ? "font-medium text-[#1B3B6F] dark:text-[#4CAF50]"
+                        ? "font-medium text-primary dark:text-primary"
                         : "text-slate-500 dark:text-slate-400"
                     }`}
                     aria-current={isLast ? "page" : undefined}

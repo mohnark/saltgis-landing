@@ -105,7 +105,7 @@ const Header = () => {
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
+                                ? "font-medium text-primary dark:text-primary"
                                 : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                             }`}
                           >
@@ -154,9 +154,9 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <Link
                   href="/contact"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-lg bg-primary px-8 py-3 text-base font-semibold text-white transition duration-300 hover:bg-primary-dark md:block md:px-9 lg:px-6 xl:px-9"
                 >
-                  Contact Us
+                  Get a Quote
                 </Link>
                 <div>
                   <ThemeToggler />

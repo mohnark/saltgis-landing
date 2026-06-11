@@ -14,6 +14,11 @@ export default function Products() {
       description:
         "Ask, analyze, and act. TerraLens turns satellite pixels and parcel data into actionable decisions with an AI-first UX.",
       videoSrc: "/images/video/terralens-demo-1.mp4",
+      outcomes: [
+        { kpi: "Minutes", label: "from question to on-map answer" },
+        { kpi: "Weeks earlier", label: "crop stress detection vs. field scouting" },
+        { kpi: "Zero", label: "GIS expertise required to get value" },
+      ],
       features: [
         {
           title: "AI-Powered Field Analysis",
@@ -81,6 +86,11 @@ export default function Products() {
       subtitle: "The Smart Way to Manage Geospatial Projects",
       description:
         "From the field to the dashboard – streamline everything in one intelligent platform.",
+      outcomes: [
+        { kpi: "One map", label: "replaces project spreadsheets, timesheets, and CRM" },
+        { kpi: "Real time", label: "visibility into every job, crew, and client" },
+        { kpi: "Hours saved", label: "every week on admin and status chasing" },
+      ],
       features: [
         {
           title: "Map-Based Project Management",
@@ -147,19 +157,26 @@ export default function Products() {
   const product = products.find((p) => p.key === active)!;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#f8fafc] to-white dark:from-[#0A0B0F] dark:via-[#0A0B0F] dark:to-[#0A0B0F] py-16 sm:py-24">
-      {/* Soft background orbs */}
-      <div className="pointer-events-none absolute -top-20 -left-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-fuchsia-500/10 blur-3xl" />
+    <section className="relative overflow-hidden bg-white dark:bg-gray-dark py-16 sm:py-24">
+      {/* Subtle map graticule */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+        }}
+      />
 
       <div className="container">
         {/* Header */}
         <div className="mb-10 flex flex-col items-center text-center">
           <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-black dark:text-white sm:text-4xl md:text-5xl">
-            Our Products
+            Software That Turns Spatial Data Into Profit
           </h2>
           <p className="max-w-3xl text-base md:text-lg text-body-color dark:text-body-color-dark">
-            Innovative software that turns complex spatial data into clear, actionable intelligence.
+            Two platforms built for people who manage land, crews, and crops — not for GIS specialists.
+            Pick your tool, see a demo, and be running this week.
           </p>
         </div>
 
@@ -204,7 +221,7 @@ export default function Products() {
 
         {/* Product Body */}
         <div className="mb-16 text-center">
-          <h3 className="mb-2 text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-fuchsia-500">
+          <h3 className="mb-2 text-4xl font-bold tracking-tight text-primary">
             {product.title}
           </h3>
           <p className="mb-4 text-2xl font-semibold text-black dark:text-white">
@@ -215,14 +232,28 @@ export default function Products() {
           </p>
         </div>
 
+        {/* Outcomes strip */}
+        {product.outcomes && (
+          <div className="mb-16 grid gap-4 sm:grid-cols-3">
+            {product.outcomes.map((o) => (
+              <div
+                key={o.label}
+                className="rounded-2xl border border-stroke dark:border-stroke-dark bg-white/80 dark:bg-white/[0.04] p-6 text-center shadow-sm"
+              >
+                <div className="text-2xl font-extrabold text-primary">{o.kpi}</div>
+                <div className="mt-1 text-sm text-body-color dark:text-body-color-dark">{o.label}</div>
+              </div>
+            ))}
+          </div>
+        )}
+
         {/* Features Grid */}
         <div className="mb-12 grid gap-6 md:gap-8 md:grid-cols-2">
           {product.features.map((feature, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden rounded-2xl border border-stroke dark:border-stroke-dark bg-white/80 dark:bg-white/[0.04] backdrop-blur supports-[backdrop-filter]:bg-white/60 p-7 md:p-8 shadow-xl transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-2xl"
+              className="group relative overflow-hidden rounded-2xl border border-stroke dark:border-stroke-dark bg-white dark:bg-white/[0.04] p-7 md:p-8 shadow-sm transition-all duration-300 hover:border-primary/40 hover:shadow-three"
             >
-              <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary/5 blur-2xl group-hover:bg-primary/10" />
               <h4 className="mb-3 text-xl font-bold text-black dark:text-white">
                 {feature.title}
               </h4>
@@ -235,7 +266,7 @@ export default function Products() {
                     key={j}
                     className="flex items-start text-base text-body-color dark:text-body-color-dark"
                   >
-                    <span className="mr-3 mt-2 inline-block h-2.5 w-2.5 rounded-full bg-gradient-to-r from-primary to-fuchsia-500" />
+                    <span className="mr-3 mt-2 inline-block h-1.5 w-1.5 rounded-full bg-primary" />
                     {d}
                   </li>
                 ))}
@@ -246,7 +277,7 @@ export default function Products() {
 
         {/* Coming Soon */}
         {product.comingSoon && (
-          <div className="mb-14 rounded-2xl border border-stroke dark:border-stroke-dark bg-white/80 dark:bg-white/[0.04] backdrop-blur supports-[backdrop-filter]:bg-white/60 p-8 shadow-xl">
+          <div className="mb-14 rounded-2xl border border-stroke dark:border-stroke-dark bg-gray-light dark:bg-white/[0.04] p-8">
             <h4 className="mb-3 text-2xl font-bold text-center text-black dark:text-white">
               {product.comingSoon.title}
             </h4>
@@ -256,7 +287,7 @@ export default function Products() {
             <ul className="mx-auto max-w-3xl space-y-2">
               {product.comingSoon.features.map((f: string, k: number) => (
                 <li key={k} className="flex items-start text-base text-body-color dark:text-body-color-dark">
-                  <span className="mr-3 mt-2 inline-block h-2.5 w-2.5 rounded-full bg-gradient-to-r from-primary to-fuchsia-500" />
+                  <span className="mr-3 mt-2 inline-block h-1.5 w-1.5 rounded-full bg-primary" />
                   {f}
                 </li>
               ))}
@@ -275,17 +306,20 @@ export default function Products() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-block border-2 border-primary text-primary px-8 py-4 rounded-xl font-semibold hover:bg-primary hover:text-white transition-colors"
+              className="inline-block border border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors"
             >
               Request Demo
             </Link>
             <Link
               href="/contact"
-              className="inline-block bg-gradient-to-r from-primary to-fuchsia-500 text-white px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity"
+              className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors shadow-btn"
             >
               Get Started Free
             </Link>
           </div>
+          <p className="mt-4 text-sm text-body-color dark:text-body-color-dark">
+            Free demo · No credit card · Setup guided by our engineers
+          </p>
         </div>
 
         {/* Footer Note */}
@@ -298,7 +332,7 @@ export default function Products() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-opacity-90 transition-colors"
+            className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors shadow-btn"
           >
             Stay Updated
           </Link>

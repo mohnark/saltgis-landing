@@ -78,13 +78,13 @@ const AboutSectionTwo = () => {
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-lg bg-[#1B3B6F] px-5 py-3 text-sm font-semibold text-white transition hover:opacity-95"
+                  className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:opacity-95"
                 >
                   Talk to an expert
                 </a>
                 <a
                   href="/case-studies"
-                  className="inline-flex items-center justify-center rounded-lg border border-[#1B3B6F]/20 px-5 py-3 text-sm font-semibold text-[#1B3B6F] dark:text-white/90 transition hover:bg-[#1B3B6F]/5 dark:hover:bg-white/5"
+                  className="inline-flex items-center justify-center rounded-lg border border-primary/30 px-5 py-3 text-sm font-semibold text-primary dark:text-white/90 transition hover:bg-primary/5 dark:hover:bg-white/5"
                 >
                   See case studies
                 </a>
