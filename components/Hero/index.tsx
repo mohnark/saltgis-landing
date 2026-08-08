@@ -50,14 +50,14 @@ const Hero = () => {
               </span>
             </Reveal> */}
 
-            <Reveal delay={100}>
-              <h1 className="mb-6 font-heading text-4xl font-bold leading-[1.08] tracking-tight text-black dark:text-white sm:text-5xl xl:text-[58px]">
-                <span className="text-gradient animate-shimmer">
-                  GIS software and AI
-                </span>{" "}
-                for satellite data
-              </h1>
-            </Reveal>
+  <h1 className="mb-6 font-heading text-4xl font-bold leading-[1.08] tracking-tight text-black dark:text-white sm:text-5xl xl:text-[58px]">
+    <span className="text-gradient animate-shimmer">
+      GIS software and AI
+    </span>
+  </h1>
+  <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+    Serving Agriculture and Insurtech
+  </p>
 
             <Reveal delay={200}>
               <p className="mx-auto mb-6 max-w-[560px] text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg lg:mx-0">
