@@ -36,9 +36,22 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="About SaltGIS"
-                paragraph="SaltGIS (Software for Advanced Location Technologies in Geographic Information Systems) develops innovative GIS software that transforms complex spatial data into clear, actionable intelligence. Founded in 2025, our mission is to equip organizations with smarter, faster, and more precise tools for land, infrastructure, and resource management. From precision mapping and spatial analysis to automation and decision dashboards, we build solutions that bridge geospatial data with real-world outcomes."
+                paragraph="SaltGIS is a GeoAI company. Founded 2025. We turn satellite, sensor, and spatial data into decisions for land, infrastructure, and resources."
                 mb="44px"
               />
+
+              <div className="mb-10 max-w-[620px] rounded-2xl border border-primary/20 bg-primary/5 p-6 dark:border-primary/30 dark:bg-primary/10">
+                <h3 className="mb-2 text-lg font-bold text-black dark:text-white">
+                  What we do
+                </h3>
+                <p className="text-base text-body-color dark:text-body-color-dark">
+                  From alumni of top universities across Europe, our team
+                  specializes in GeoAI software development -bridging
+                  capacity gaps and accelerating product delivery for
+                  organizations working with land, infrastructure, and
+                  resources.
+                </p>
+              </div>
 
               <div
                 className="wow fadeInUp mb-12 max-w-[620px] lg:mb-0"
@@ -53,7 +66,7 @@ const AboutSectionOne = () => {
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text="Automated ETL, QA, and spatial data pipelines" />
-                    <List text="OGC standards (WMS, WFS, WFS-T) & interoperability" />
+                    <List text="Machine learning for detection & prediction" />
                     <List text="Dashboards & decision-support systems" />
                   </div>
                 </div>

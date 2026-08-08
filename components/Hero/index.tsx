@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Reveal from "../Common/Reveal";
-import HeroVisual from "./HeroVisual";
+import BuildRotator from "./BuildRotator";
 
 const techStack = [
   "PostGIS",
+  "PyTorch",
   "MapLibre",
   "Deck.gl",
   "Sentinel-2",
@@ -51,20 +52,36 @@ const Hero = () => {
 
             <Reveal delay={100}>
               <h1 className="mb-6 font-heading text-4xl font-bold leading-[1.08] tracking-tight text-black dark:text-white sm:text-5xl xl:text-[58px]">
-                Turn maps and satellite data into{" "}
                 <span className="text-gradient animate-shimmer">
-                  decisions that pay off
-                </span>
+                  GIS software and AI
+                </span>{" "}
+                for satellite data
               </h1>
             </Reveal>
 
             <Reveal delay={200}>
-              <p className="mx-auto mb-10 max-w-[560px] text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg lg:mx-0">
-                SaltGIS builds the dashboards, Web GIS platforms, and automation
-                pipelines that turn raw spatial data into answers for
-                agriculture, infrastructure, and urban planning. First
-                production dashboard in under 6 weeks. Cuts manual effort.
+              <p className="mx-auto mb-6 max-w-[560px] text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg lg:mx-0">
+                Tell us the problem. We send back a scope and a price.
               </p>
+            </Reveal>
+
+            <Reveal delay={250}>
+              <p className="mx-auto mb-8 max-w-[560px] text-base font-semibold text-black dark:text-white lg:mx-0">
+                A small team of young graduates from Europe&apos;s top
+                institutes.
+              </p>
+              <div className="mb-10 flex flex-wrap justify-center gap-2.5 lg:justify-start">
+                {["Earth Observation", "Geoscience AI", "Software"].map(
+                  (label) => (
+                    <span
+                      key={label}
+                      className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3.5 py-1.5 text-sm font-semibold text-primary dark:border-primary/30 dark:bg-primary/10"
+                    >
+                      {label}
+                    </span>
+                  ),
+                )}
+              </div>
             </Reveal>
 
             <Reveal delay={300}>
@@ -73,7 +90,7 @@ const Hero = () => {
                   href="/contact"
                   className="group inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white shadow-glow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-glow"
                 >
-                  Book a Free Consultation
+                  Get a Quote
                   <svg
                     className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                     viewBox="0 0 16 16"
@@ -87,22 +104,13 @@ const Hero = () => {
                     <path d="M3 8h10M9 4l4 4-4 4" />
                   </svg>
                 </Link>
-                <Link
-                  href="/products"
-                  className="inline-flex items-center justify-center rounded-xl border border-stroke bg-white px-8 py-4 text-base font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:text-primary dark:border-stroke-dark dark:bg-white/5 dark:text-white dark:hover:border-primary dark:hover:text-primary"
-                >
-                  See Our Products
-                </Link>
               </div>
-              <p className="mt-6 text-sm text-body-color dark:text-body-color-dark">
-                Free consultation · No commitment · Reply within 24 hours
-              </p>
             </Reveal>
           </div>
 
-          {/* Product visual */}
-          <Reveal from="right" delay={200}>
-            <HeroVisual />
+          {/* Rotating "what we build" panel */}
+          <Reveal delay={200} from="scale">
+            <BuildRotator />
           </Reveal>
         </div>
       </div>
@@ -110,7 +118,7 @@ const Hero = () => {
       {/* Open geo-stack marquee */}
       <div className="container mt-16 md:mt-20">
         <p className="mb-5 text-center text-xs font-semibold uppercase tracking-[0.2em] text-body-color/70 dark:text-body-color-dark/70">
-          Built on the open geospatial stack
+          Our stack
         </p>
         <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
           <div className="flex w-max animate-marquee items-center gap-12 whitespace-nowrap py-2">

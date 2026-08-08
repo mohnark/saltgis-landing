@@ -7,7 +7,7 @@ const SectionTitle = ({
   eyebrow,
 }: {
   title: string;
-  paragraph: string;
+  paragraph?: string;
   width?: string;
   center?: boolean;
   mb?: string;
@@ -28,12 +28,14 @@ const SectionTitle = ({
           {eyebrow}
         </span>
       )}
-      <h2 className="mb-4 font-heading text-3xl font-bold !leading-tight tracking-tight text-black dark:text-white sm:text-4xl md:text-[42px]">
+      <h2 className="font-heading text-3xl font-bold !leading-tight tracking-tight text-black dark:text-white sm:text-4xl md:text-[42px]">
         {title}
       </h2>
-      <p className="text-base !leading-relaxed text-body-color dark:text-body-color-dark md:text-lg">
-        {paragraph}
-      </p>
+      {paragraph && (
+        <p className="mt-4 text-base !leading-relaxed text-body-color dark:text-body-color-dark md:text-lg">
+          {paragraph}
+        </p>
+      )}
     </div>
   );
 };

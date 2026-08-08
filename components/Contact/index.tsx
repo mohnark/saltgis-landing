@@ -38,7 +38,7 @@ const Contact = () => {
                 Get In Touch
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                Ready to transform your spatial data? Let's discuss your geospatial needs.
+                Tell us what you need. We reply with a scope and a price.
               </p>
               <form onSubmit={handleSubmit}>
                 <div className="-mx-4 flex flex-wrap">

@@ -20,8 +20,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-body-color">
-                  SaltGIS develops innovative software that transforms complex spatial data into clear, actionable intelligence. 
-                  Our mission is to equip organizations with tools that make land, infrastructure, and resource management smarter, faster, and more precise.
+                  GIS software and AI for satellite and location data.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -56,14 +55,6 @@ const Footer = () => {
                       className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
                     >
                       Home
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/about"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
-                    >
-                      About Us
                     </a>
                   </li>
                   <li>
@@ -116,14 +107,6 @@ const Footer = () => {
                       Automation
                     </a>
                   </li>
-                  {/* <li>
-                    <a
-                      href="/products"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
-                    >
-                      GeoFlow
-                    </a>
-                  </li> */}
                 </ul>
               </div>
             </div>

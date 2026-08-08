@@ -15,8 +15,8 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata = {
   title: "SaltGIS",
-  description: "SaltGIS develops innovative software that transforms complex spatial data into clear, actionable intelligence. Our mission is to equip organizations with tools that make land, infrastructure, and resource management smarter, faster, and more precise.",
-  keywords: ["GIS", "Geographic Information Systems", "Location Intelligence", "Spatial Data", "SaltGIS", "Geospatial Software"],
+  description: "SaltGIS builds AI-powered software for geospatial intelligence -turning satellite, sensor, and location data into decisions for agriculture, infrastructure, and urban planning.",
+  keywords: ["AI", "Machine Learning", "GIS", "Geospatial Software", "Location Intelligence", "Spatial Data", "SaltGIS"],
   authors: [{ name: "SaltGIS" }],
   creator: "SaltGIS",
   publisher: "SaltGIS",
@@ -36,7 +36,7 @@ export const metadata = {
   },
   openGraph: {
     title: "SaltGIS",
-    description: "SaltGIS develops innovative software that transforms complex spatial data into clear, actionable intelligence.",
+    description: "AI-powered software for geospatial intelligence.",
     url: "https://saltgis.eu",
     siteName: "SaltGIS",
     locale: "en_US",
@@ -45,7 +45,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SaltGIS",
-    description: "SaltGIS develops innovative software that transforms complex spatial data into clear, actionable intelligence.",
+    description: "AI-powered software for geospatial intelligence.",
     creator: "@saltgis",
   },
   robots: {

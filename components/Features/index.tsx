@@ -10,7 +10,7 @@ const Features = () => {
         <SectionTitle
           eyebrow="Why SaltGIS"
           title="Our Core Capabilities"
-          paragraph="SaltGIS develops innovative geospatial solutions that turn complex location data into actionable intelligence. From precision mapping to automation and open-source innovation, our tools are designed to help organizations manage land, resources, and infrastructure with confidence."
+          paragraph="AI, software, and GIS in one stack -built to turn location data into decisions for land, resources, and infrastructure."
           center
         />
 

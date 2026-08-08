@@ -97,6 +97,10 @@ module.exports = {
           from: { strokeDashoffset: "600" },
           to: { strokeDashoffset: "0" },
         },
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(10px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         float: "float 6s ease-in-out infinite",
@@ -107,6 +111,7 @@ module.exports = {
         shimmer: "shimmer 3.5s linear infinite",
         "spin-slow": "spin-slow 24s linear infinite",
         "draw-line": "draw-line 2.4s ease-out forwards",
+        "fade-up": "fade-up 0.5s cubic-bezier(0.21, 0.47, 0.32, 0.98) both",
       },
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",

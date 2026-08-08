@@ -15,7 +15,7 @@ const featuresData: Feature[] = [
     ),
     title: "Precision Mapping",
     paragraph:
-      "We build advanced GIS tools for high-accuracy mapping and spatial analysis, empowering organizations to manage land, resources, and infrastructure with confidence.",
+      "High-accuracy mapping and spatial analysis for land, resources, and infrastructure.",
   },
   {
     id: 2,
@@ -29,21 +29,24 @@ const featuresData: Feature[] = [
     ),
     title: "Actionable Insights",
     paragraph:
-      "Our solutions transform raw geospatial data into clear, usable intelligence for agriculture, urban planning, environmental monitoring, and beyond.",
+      "Raw geospatial data, turned into clear intelligence -for agriculture, urban planning, environmental monitoring, and beyond.",
   },
   {
     id: 3,
     icon: (
-      // Modern Technology Stack — layered tiles
+      // AI & Machine Learning — network nodes
       <svg width="40" height="40" viewBox="0 0 24 24" className={iconClass} fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M12 3l9 5-9 5-9-5 9-5z" />
-        <path d="M3 13l9 5 9-5" />
-        <path d="M3 18l9 5 9-5" />
+        <circle cx="5" cy="6" r="2" />
+        <circle cx="5" cy="18" r="2" />
+        <circle cx="12" cy="12" r="2.5" />
+        <circle cx="19" cy="6" r="2" />
+        <circle cx="19" cy="18" r="2" />
+        <path d="M6.7 7.3L10 10.5M6.7 16.7L10 13.5M14 10.5l3.3-3.2M14 13.5l3.3 3.2" strokeOpacity=".55" />
       </svg>
     ),
-    title: "Modern Technology Stack",
+    title: "AI & Machine Learning",
     paragraph:
-      "Built with modern GIS technologies, cloud infrastructure, and scalable APIs, our applications deliver high-performance spatial analysis and mapping capabilities that grow with your business needs.",
+      "Custom models on satellite and sensor data -detection, prediction, and forecasting trained on your land, not a generic dataset.",
   },
   {
     id: 4,
@@ -58,7 +61,7 @@ const featuresData: Feature[] = [
     ),
     title: "Customizable Solutions",
     paragraph:
-      "Every organization is different. We tailor our GIS platforms to fit specific workflows, datasets, and decision-making processes.",
+      "Every organization's different. We tailor platforms to your workflows, data, and decisions.",
   },
   {
     id: 5,
@@ -73,7 +76,7 @@ const featuresData: Feature[] = [
     ),
     title: "Automation & Efficiency",
     paragraph:
-      "From field data collection to cloud-based analytics, we streamline geospatial workflows to save time and reduce costs.",
+      "Field data to cloud analytics -streamlined, to save time and cut cost.",
   },
   {
     id: 6,
@@ -86,7 +89,7 @@ const featuresData: Feature[] = [
     ),
     title: "Open & Innovative",
     paragraph:
-      "We embrace open-source technologies and global standards, ensuring our tools are interoperable, transparent, and future-ready.",
+      "Open-source technologies and global standards. Interoperable, transparent, future-ready.",
   },
 ];
 

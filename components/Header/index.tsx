@@ -3,8 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Mail, Phone } from "lucide-react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { contactConfig } from "@/lib/contact";
 
 const Header = () => {
   // Navbar toggle
@@ -151,12 +153,26 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
+              <div className="flex items-center justify-end gap-4 pr-16 lg:pr-0">
+                <a
+                  href={`tel:${contactConfig.phone}`}
+                  className="hidden items-center gap-1.5 text-sm font-semibold text-dark dark:text-white md:flex"
+                >
+                  <Phone className="h-4 w-4 text-primary" />
+                  {contactConfig.phone}
+                </a>
+                <a
+                  href="mailto:kumail@saltgis.eu"
+                  className="hidden items-center gap-1.5 text-sm font-semibold text-dark dark:text-white md:flex"
+                >
+                  <Mail className="h-4 w-4 text-primary" />
+                  kumail@saltgis.eu
+                </a>
                 <Link
                   href="/contact"
                   className="ease-in-up hidden rounded-xl bg-primary px-8 py-3 text-base font-semibold text-white shadow-btn transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-glow-sm md:block md:px-9 lg:px-6 xl:px-9"
                 >
-                  Get a Quote
+                  Contact Us
                 </Link>
                 <div>
                   <ThemeToggler />

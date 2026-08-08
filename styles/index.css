@@ -98,3 +98,19 @@
     }
   }
 }
+
+/* Auto-rotation progress rail (components/Hero/BuildRotator.tsx) */
+@keyframes progress-rail {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="progress-rail"] {
+    animation: none !important;
+  }
+}

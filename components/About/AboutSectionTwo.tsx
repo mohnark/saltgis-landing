@@ -30,13 +30,12 @@ const AboutSectionTwo = () => {
                 id="about-saltgis"
                 className="mb-6 text-2xl font-bold leading-tight text-black dark:text-white sm:text-3xl"
               >
-                Precision software for a mapped world
+                GeoAI, one company
               </h2>
               <p className="mb-10 text-base leading-relaxed text-body-color sm:text-lg">
-                SaltGIS builds modern GIS applications that turn complex location data into
-                decisions. From parcel mapping and field operations to analytics and
-                automation, we help organizations manage land, infrastructure, and resources
-                with accuracy and speed.
+                We turn location data into decisions -mapping, machine
+                learning, automation, one stack for land, infrastructure,
+                and resources.
               </p>
 
               {/* Points */}
@@ -46,31 +45,31 @@ const AboutSectionTwo = () => {
                     Precision Mapping
                   </h3>
                   <p className="text-base text-body-color">
-                    High‑accuracy tools for editing, measuring, and validating spatial data.
-                    Clean cartography, topology‑safe edits, and configurable layers ensure
-                    your maps are reliable and field‑ready.
+                    High-accuracy editing, measuring, and validation. Clean
+                    cartography, topology-safe edits, field-ready maps.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="mb-3 text-xl font-semibold text-black dark:text-white">
-                    Actionable Insights
+                    AI-Driven Insights
                   </h3>
                   <p className="text-base text-body-color">
-                    Convert raw geospatial inputs into clear intelligence for agriculture,
-                    urban planning, and environmental monitoring. Dashboards, alerts, and
-                    exports keep teams aligned and decisive.
+                    Machine learning models turn raw geospatial inputs into
+                    intelligence for agriculture, urban planning, and
+                    environmental monitoring -alerts, dashboards, exports.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="mb-3 text-xl font-semibold text-black dark:text-white">
-                  Open Standards & Interoperability
+                    Open Standards & Interoperability
                   </h3>
                   <p className="text-base text-body-color">
-                  SaltGIS speaks the language of geospatial: OGC APIs and services (WMS, WMTS, WFS‑T),
-    GeoJSON and vector tiles, PostGIS and cloud data lakes. Import from common formats
-    (CSV, SHP, GPKG, Parquet) and connect to Esri/Mapbox/QGIS workflows without friction.                  </p>
+                    OGC APIs (WMS, WMTS, WFS-T), GeoJSON, vector tiles,
+                    PostGIS, cloud data lakes. CSV, SHP, GPKG, Parquet in.
+                    Esri, Mapbox, QGIS -no friction.
+                  </p>
                 </div>
               </div>
 

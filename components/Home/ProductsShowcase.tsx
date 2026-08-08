@@ -8,11 +8,11 @@ const products = [
     name: "TerraLens",
     tagline: "AI Field Intelligence for Agriculture",
     pitch:
-      "Ask your fields a question in plain language and get maps, metrics, and clear answers in seconds. NDVI, time-series, parcel health scores, and geo-pinned tasks -without a GIS specialist on staff.",
+      "Ask your fields a question. Get maps, metrics, and answers back -no GIS specialist needed. NDVI, time-series, and parcel health scores, powered by machine learning.",
     outcomes: [
-      "Spot crop stress weeks before it costs you yield",
-      "From satellite pixels to a decision in minutes, not days",
-      "Reports your stakeholders actually understand",
+      "Spot crop stress weeks early",
+      "Pixels to decision in minutes",
+      "Reports anyone can read",
     ],
     cta: "See TerraLens in Action",
     badge: "For agriculture",
@@ -42,8 +42,8 @@ const ProductsShowcase = () => {
       <div className="container">
         <SectionTitle
           eyebrow="Products"
-          title="Built to Sell Decisions, Not Just Maps"
-          paragraph="Two platforms, one goal: get your team from raw spatial data to confident action faster than any spreadsheet or legacy GIS ever could."
+          title="AI Products, Not Just Maps"
+          paragraph="Software that reads your land and tells you what to do next."
           center
         />
 

@@ -1,163 +1,28 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
+import { ArrowRight } from "lucide-react";
+
+const features = [
+  {
+    title: "Ask in plain language",
+    description: "Type a question, get maps, metrics, and an explanation.",
+  },
+  {
+    title: "Parcel-level analytics",
+    description: "Health scores and reports attached to real land parcels.",
+  },
+  {
+    title: "Indices and time-series",
+    description: "NDVI, NDWI, red-edge. Compare dates, spot change.",
+  },
+  {
+    title: "Notes and tasks on the map",
+    description: "Pin findings, assign to crews, export CSV or GeoJSON.",
+  },
+];
 
 export default function Products() {
-  const [active, setActive] = useState<"TerraLens">("TerraLens");
-
-  const products = [
-    {
-      key: "TerraLens" as const,
-      title: "TerraLens",
-      subtitle: "AI Field Intelligence for Agriculture",
-      description:
-        "Ask, analyze, and act. TerraLens turns satellite pixels and parcel data into actionable decisions with an AI-first UX.",
-      videoSrc: "/images/video/terralens-demo-1.mp4",
-      outcomes: [
-        { kpi: "Minutes", label: "from question to on-map answer" },
-        { kpi: "Weeks earlier", label: "crop stress detection vs. field scouting" },
-        { kpi: "Zero", label: "GIS expertise required to get value" },
-      ],
-      features: [
-        {
-          title: "AI-Powered Field Analysis",
-          description:
-            "Chat with your fields. Type natural questions and get maps, metrics, and clear explanations instantly.",
-          details: [
-            "Ask in plain language",
-            "On-map answers and callouts",
-            "Explain-it-like-I'm-5 mode",
-            "Auto-generated shareable insights",
-          ],
-        },
-        {
-          title: "Parcel‑Centric Workflows",
-          description:
-            "Attach analytics to real land parcels for clean, manager‑friendly reporting.",
-          details: [
-            "Select parcels by click or search",
-            "Batch run indices",
-            "Per‑parcel health scores",
-            "PDF/PNG exports for stakeholders",
-          ],
-        },
-        {
-          title: "Indices & Time‑Series",
-          description:
-            "From NDVI to Red‑Edge Chlorophyll -compare dates, spot anomalies, and track trends.",
-          details: [
-            "Rapid index library (NDVI, CIred‑edge, NDWI, more)",
-            "Date‑to‑date change maps",
-            "Cloud‑aware previews",
-            "Side‑by‑side compare",
-          ],
-        },
-        {
-          title: "Smart Tasking & Notes",
-          description:
-            "Turn insights into action - create geo-pinned tasks and field notes right on the map.",
-          details: [
-            "One‑click notes on any pixel",
-            "Assign to field crews",
-            "Due dates & priority tags",
-            "CSV/GeoJSON export",
-          ],
-        },
-      ],
-      comingSoon: {
-        title: "AI Automations (Coming Soon)",
-        description: "Your agronomy co‑pilot for the busy season.",
-        features: [
-          "Yield‑risk early warnings",
-          "Water stress and nitrogen hints",
-          "Auto‑summaries per parcel per week",
-          "WhatsApp/Email digests for teams",
-        ],
-      },
-      cta: {
-        headline: "See TerraLens in action.",
-        sub: "The fastest way to go from pixels to decisions.",
-      },
-    },
-    // {
-    //   key: "GeoFlow" as const,
-    //   title: "GeoFlow",
-    //   subtitle: "The Smart Way to Manage Geospatial Projects",
-    //   description:
-    //     "From the field to the dashboard – streamline everything in one intelligent platform.",
-    //   outcomes: [
-    //     { kpi: "One map", label: "replaces project spreadsheets, timesheets, and CRM" },
-    //     { kpi: "Real time", label: "visibility into every job, crew, and client" },
-    //     { kpi: "Hours saved", label: "every week on admin and status chasing" },
-    //   ],
-    //   features: [
-    //     {
-    //       title: "Map-Based Project Management",
-    //       description:
-    //         "Visualize and manage projects linked to real land parcels. Track project status, location, and progress directly from the map interface.",
-    //       details: [
-    //         "Search addresses",
-    //         "Drop project pins",
-    //         "Change project statuses on the fly",
-    //         "Filter by location, job number, or status",
-    //       ],
-    //     },
-    //     {
-    //       title: "Employee & Contractor Management",
-    //       description:
-    //         "Add, track, and update employee or contractor records with full control and visibility.",
-    //       details: [
-    //         "Define custom roles: Admin, Technician, Field Crew",
-    //         "Log attendance with check-in/out tracking",
-    //         "View total hours worked",
-    //         "Maintain SSNs, contact info, addresses, and contractor types",
-    //       ],
-    //     },
-    //     {
-    //       title: "Client & Inquiry Tracking",
-    //       description:
-    //         "Easily onboard clients and log their project inquiries from a simple, intuitive interface.",
-    //       details: [
-    //         "Streamlined client onboarding",
-    //         "Project inquiry management",
-    //         "Client communication tracking",
-    //         "Automated follow-up reminders",
-    //       ],
-    //     },
-    //     {
-    //       title: "Smart Admin Dashboard",
-    //       description:
-    //         "One glance gives you everything you need to know about your operations.",
-    //       details: [
-    //         "Real-time project status distribution",
-    //         "Daily hours logged by team",
-    //         "Quick insights into resource load and team activity",
-    //         "Performance metrics and analytics",
-    //       ],
-    //     },
-    //   ],
-    //   comingSoon: {
-    //     title: "AI-Powered Search & Automation (Coming Soon)",
-    //     description: "Accelerate operations with built-in AI assistance.",
-    //     features: [
-    //       'Natural language search: "Show me all pending fieldwork in Austin"',
-    //       "Auto-suggest project locations from map context",
-    //       "Intelligent matching of clients, parcels, and projects",
-    //       "Predictive status updates and risk alerts",
-    //     ],
-    //   },
-    //   cta: {
-    //     headline: "Power your geospatial workflows with GeoFlow.",
-    //     sub: "Try the future of project management, today.",
-    //   },
-    // },
-  ];
-
-  const product = products.find((p) => p.key === active)!;
-
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-gray-dark py-16 sm:py-24">
+    <section className="relative overflow-hidden bg-white py-16 dark:bg-gray-dark sm:py-20">
       {/* Subtle map graticule */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
@@ -169,172 +34,56 @@ export default function Products() {
       />
 
       <div className="container">
-        {/* Header */}
-        <div className="mb-10 flex flex-col items-center text-center">
-          <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-black dark:text-white sm:text-4xl md:text-5xl">
-            Software That Turns Spatial Data Into Profit
-          </h2>
-          <p className="max-w-3xl text-base md:text-lg text-body-color dark:text-body-color-dark">
-            Two platforms built for people who manage land, crews, and crops -not for GIS specialists.
-            Pick your tool, see a demo, and be running this week.
+        <div className="mx-auto mb-10 max-w-2xl text-center">
+          <h1 className="font-heading text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl md:text-5xl">
+            TerraLens
+          </h1>
+          <p className="mt-3 text-lg font-semibold text-primary">
+            AI field intelligence for agriculture
+          </p>
+          <p className="mt-4 text-base text-body-color dark:text-body-color-dark">
+            Satellite pixels and parcel data, turned into answers. No GIS
+            expertise needed.
           </p>
         </div>
 
-        {/* Pills */}
-        <div className="mx-auto mb-10 flex w-full max-w-xl items-center justify-center rounded-full border border-stroke dark:border-stroke-dark bg-white/70 dark:bg-white/5 backdrop-blur supports-[backdrop-filter]:bg-white/50 p-1 shadow-sm">
-          {products.map(({ key }) => (
-            <button
-              key={key}
-              onClick={() => setActive(key)}
-              className={`flex-1 rounded-full px-5 py-3 text-sm font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60
-                ${
-                  active === key
-                    ? "bg-primary text-white shadow"
-                    : "text-black/70 dark:text-white/70 hover:bg-black/5 dark:hover:bg-white/10"
-                }
-              `}
-            >
-              {key}
-            </button>
-          ))}
+        <div className="relative mx-auto mb-14 max-w-5xl overflow-hidden rounded-2xl border border-black/5 shadow-2xl dark:border-white/10">
+          <video
+            className="h-full w-full"
+            src="/images/video/terralens-demo-1.mp4"
+            playsInline
+            muted
+            loop
+            autoPlay
+            controls
+            poster="/images/video/poster-terralens.jpg"
+          />
+          <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-black/10 dark:ring-white/10" />
         </div>
 
-        {/* TerraLens Hero Video */}
-        {product.key === "TerraLens" && (
-          <div className="mb-12">
-            <div className="relative mx-auto max-w-6xl overflow-hidden rounded-2xl border border-black/5 dark:border-white/10 shadow-2xl">
-              <video
-                className="h-full w-full"
-                src={product.videoSrc}
-                playsInline
-                muted
-                loop
-                autoPlay
-                controls
-                poster="/images/video/poster-terralens.jpg"
-              />
-              {/* Glow edge */}
-              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-black/10 dark:ring-white/10" />
-            </div>
-          </div>
-        )}
-
-        {/* Product Body */}
-        <div className="mb-16 text-center">
-          <h3 className="mb-2 text-4xl font-bold tracking-tight text-primary">
-            {product.title}
-          </h3>
-          <p className="mb-4 text-2xl font-semibold text-black dark:text-white">
-            {product.subtitle}
-          </p>
-          <p className="mx-auto max-w-3xl text-lg text-body-color dark:text-body-color-dark">
-            {product.description}
-          </p>
-        </div>
-
-        {/* Outcomes strip */}
-        {product.outcomes && (
-          <div className="mb-16 grid gap-4 sm:grid-cols-3">
-            {product.outcomes.map((o) => (
-              <div
-                key={o.label}
-                className="rounded-2xl border border-stroke dark:border-stroke-dark bg-white/80 dark:bg-white/[0.04] p-6 text-center shadow-sm"
-              >
-                <div className="text-2xl font-extrabold text-primary">{o.kpi}</div>
-                <div className="mt-1 text-sm text-body-color dark:text-body-color-dark">{o.label}</div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* Features Grid */}
-        <div className="mb-12 grid gap-6 md:gap-8 md:grid-cols-2">
-          {product.features.map((feature, i) => (
+        <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2">
+          {features.map((feature) => (
             <div
-              key={i}
-              className="group relative overflow-hidden rounded-2xl border border-stroke dark:border-stroke-dark bg-white dark:bg-white/[0.04] p-7 md:p-8 shadow-sm transition-all duration-300 hover:border-primary/40 hover:shadow-three"
+              key={feature.title}
+              className="rounded-2xl border border-stroke bg-white p-6 shadow-card transition-all duration-300 hover:border-primary/30 hover:shadow-card-hover dark:border-stroke-dark dark:bg-white/[0.04]"
             >
-              <h4 className="mb-3 text-xl font-bold text-black dark:text-white">
+              <h2 className="font-heading text-lg font-bold text-black dark:text-white">
                 {feature.title}
-              </h4>
-              <p className="mb-5 text-base text-body-color dark:text-body-color-dark">
+              </h2>
+              <p className="mt-2 text-sm text-body-color dark:text-body-color-dark">
                 {feature.description}
               </p>
-              <ul className="space-y-2">
-                {feature.details.map((d: string, j: number) => (
-                  <li
-                    key={j}
-                    className="flex items-start text-base text-body-color dark:text-body-color-dark"
-                  >
-                    <span className="mr-3 mt-2 inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-                    {d}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
 
-        {/* Coming Soon */}
-        {product.comingSoon && (
-          <div className="mb-14 rounded-2xl border border-stroke dark:border-stroke-dark bg-gray-light dark:bg-white/[0.04] p-8">
-            <h4 className="mb-3 text-2xl font-bold text-center text-black dark:text-white">
-              {product.comingSoon.title}
-            </h4>
-            <p className="mx-auto mb-6 max-w-3xl text-center text-base text-body-color dark:text-body-color-dark">
-              {product.comingSoon.description}
-            </p>
-            <ul className="mx-auto max-w-3xl space-y-2">
-              {product.comingSoon.features.map((f: string, k: number) => (
-                <li key={k} className="flex items-start text-base text-body-color dark:text-body-color-dark">
-                  <span className="mr-3 mt-2 inline-block h-1.5 w-1.5 rounded-full bg-primary" />
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {/* CTA */}
-        <div className="text-center">
-          <h4 className="mb-2 text-3xl font-extrabold text-black dark:text-white">
-            {product.cta?.headline}
-          </h4>
-          <p className="mb-8 text-lg text-body-color dark:text-body-color-dark">
-            {product.cta?.sub}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="inline-block border border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors"
-            >
-              Request Demo
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors shadow-btn"
-            >
-              Get Started Free
-            </Link>
-          </div>
-          <p className="mt-4 text-sm text-body-color dark:text-body-color-dark">
-            Free demo · No credit card · Setup guided by our engineers
-          </p>
-        </div>
-
-        {/* Footer Note */}
-        <div className="mt-16 text-center">
-          <h3 className="mb-2 text-2xl font-bold text-black dark:text-white">
-            More Products Coming Soon
-          </h3>
-          <p className="mb-6 text-base text-body-color dark:text-body-color-dark">
-            We’re constantly developing new solutions to meet evolving geospatial needs.
-          </p>
+        <div className="mt-14 text-center">
           <Link
             href="/contact"
-            className="inline-block bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors shadow-btn"
+            className="group inline-flex items-center gap-2 rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white shadow-glow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-glow"
           >
-            Stay Updated
+            Request a Demo
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
       </div>
