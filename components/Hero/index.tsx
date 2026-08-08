@@ -56,7 +56,7 @@ const Hero = () => {
     </span>
   </h1>
   <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-    Serving Agriculture and Insurtech
+    For Land Monitoring, Agriculture & Insurance
   </p>
 
             <Reveal delay={200}>
